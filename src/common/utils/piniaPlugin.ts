@@ -40,6 +40,7 @@ const plugin = (options: Options): any => {
         storageType = item.storageType
         const data = getStorageTypeMap[storageType](`${key ?? 'pinia'}-${store.$id}`)
         if (data) {
+          console.log(data)
           store.$patch(data)
         }
         if (path && path.length > 0) {

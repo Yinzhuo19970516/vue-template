@@ -10,7 +10,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import { queryInviteActivityRule } from '../api/index'
+import { getInfoConfig } from '../api/index'
 import { Cell } from 'vant'
 import { onMounted } from 'vue'
 import * as piniaStore from '../piniaStore'
@@ -18,18 +18,19 @@ import { setSessionStorage } from '@/common/utils/storage'
 const storeVuex = useStore()
 const router = useRouter()
 const getData = async () => {
-  const data = await queryInviteActivityRule({
-    no: '29571682bd3040bd800a4031c7fc9987'
+  const data = await getInfoConfig({
+    key: 'xiaoying.loanproduct.h5.faceAuthority'
   }).catch(err => {
     console.log('err', err)
     return Promise.reject(err)
   })
   console.log(data)
   storeVuex.commit('increment')
-  setSessionStorage('key', '123321')
+  setSessionStorage('key', data)
   piniaStore.main().$patch({
-    configInfo: data
+    configInfo: { data: data }
   })
+  console.log(piniaStore.main())
   piniaStore.test().$patch({
     age: 24
   })

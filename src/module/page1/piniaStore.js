@@ -7,9 +7,7 @@ export const main = defineStore('main', {
       test1: 'hello word1',
       configInfo: {}
     }
-  },
-  getters: {},
-  actions: {}
+  }
 })
 
 export const test = defineStore('test', {

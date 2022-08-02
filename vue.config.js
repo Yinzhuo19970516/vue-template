@@ -91,8 +91,8 @@ module.exports = defineConfig({
       return middleware
     },
     proxy: {
-      '/': {
-        target: 'https://jsonplaceholder.typicde.com',
+      '/h5': {
+        target: 'https://cardloan.xiaoying.com',
         // target: '',
         changeOrigin: true,
       },

@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { showLoading, showErrorInfo, hideLoading } from '@/common/utils'
+import qs from 'qs'
 
 interface MyAxiosRequestConfig extends AxiosRequestConfig {
   slientError?: boolean
@@ -40,9 +41,12 @@ class Request {
     this.instance.interceptors.request.use((requestConfig: MyAxiosRequestConfig) => {
       // 这里处理ajaxState
       // 这里处理PHP接口逻辑
-      console.log('requestConfig', requestConfig)
+      console.log('requestConfig', requestConfig, config)
       const { loading = true } = requestConfig
       if (loading) addLoading()
+      if (requestConfig.headers?.['Content-Type'] === 'application/x-www-form-urlencoded') {
+        requestConfig.data = qs.stringify(requestConfig.data)
+      }
       return requestConfig
     }, (error: any) => {
       console.log('requestError', error)
@@ -52,11 +56,11 @@ class Request {
       (responseData: MyAxiosResponse) => {
         const status = responseData.status
         const res = responseData.data
-        const { data, code } = res
+        const { data, errcode } = res
         const { loading = true } = responseData.config
         if (loading) cancelLoading()
         // 如果调用其他中台，此处需要单独对code做转化
-        if (status === 200 && code === '000010') {
+        if (status === 200 && errcode === 0) {
           return Promise.resolve(data || res || {})
         } else {
           // 此处可以处理其他特殊的业务逻辑
@@ -64,7 +68,7 @@ class Request {
           if (responseData.config.slientError) {
             return Promise.reject(res)
           }
-          showErrorInfo(res.msg)
+          showErrorInfo(res.errstr)
           return Promise.reject(res)
         }
       },
