@@ -1357,7 +1357,7 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 ## 微信公众号
 ![](./image/img.png)
 ## 个人微信
-![](./image/wx.jpg)
+![](./image/wx.jpg width=100 height=200 />
 
 
 
