@@ -4,7 +4,11 @@ https://www.yuque.com/docs/share/92b547ee-d40b-4e52-85ac-63395284c389?# 《Vue3�
 ## 掘金博客地址
 https://juejin.cn/post/7127130027992285197
 
-如果有任何疑问，可直接翻到readme底部，wx联系我，工作时间秒回。
+如果有任何疑问，可直接，wx联系我，工作时间秒回。
+## 微信公众号
+![](./image/img.png)
+## 个人微信
+<img src='./image/wx.jpg' width=40% />
 
 #### npm i
 #### npm run dev
@@ -1357,7 +1361,7 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 ## 微信公众号
 ![](./image/img.png)
 ## 个人微信
-![](./image/wx.jpg)
+<img src='./image/wx.jpg' width=40% />
 
 
 
