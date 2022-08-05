@@ -4,9 +4,7 @@ const { defineConfig } = require('@vue/cli-service')
 const glob = require('glob') // 用于筛选文件
 const path = require('path')
 
-// 指令输入
-// const singleName = process.argv[3]
-const entryName = ''
+const entryName = process.env.npm_config_page
 const entry1 = glob.sync('src/main.js') // 单入口
 const entry2 = glob.sync('src/module/*/main.js') // 多入口
 const entryList = [...entry1, ...entry2]
@@ -29,7 +27,6 @@ entryList.forEach(filePath => {
     html += `<a href="${filename}/">${filename}/</a><br>`
   }
 })
-console.log(pages)
 
 module.exports = defineConfig({
   publicPath: process.env.VUE_APP_PUBLIC_PATH,
@@ -83,6 +80,7 @@ module.exports = defineConfig({
   },
   devServer: {
     host: '0.0.0.0',
+    open: false,
     setupMiddlewares: (middleware, devServer) => {
       devServer.app.get('', (_, response) => {
         response.write(html)
@@ -94,8 +92,8 @@ module.exports = defineConfig({
       '/h5': {
         target: 'https://cardloan.xiaoying.com',
         // target: '',
-        changeOrigin: true,
-      },
+        changeOrigin: true
+      }
     }
   }
 })
