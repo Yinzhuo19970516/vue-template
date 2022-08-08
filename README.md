@@ -12,7 +12,10 @@
 
 <p align="center">如果有任何疑问，可直接微信联系我，秒回。</p>
 <h3 align='center'>个人微信 & 微信公众号</h3>
-<p style='display:flex;justify-content: space-between;align-items: center'><img alt="logo" style='display:flex' src="https://pic.imgdb.cn/item/62f0afa516f2c2beb12463c3.jpg" width="40%" ><img alt="logo" style='display:flex;' src="https://pic.imgdb.cn/item/62f0b07916f2c2beb1287679.png" width="300" height="300"></p>
+<p style='display:flex;justify-content: space-between;align-items: center'>
+<img alt="logo" style='display:flex;text-align:left' src="./image/wx.png" width="400">
+<img alt="logo" style='display:flex;text-align:right' src="./image/gzh.png" width="400">
+</p>
 
 <h3>启动项目</h3> 
 
