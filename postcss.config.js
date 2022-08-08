@@ -2,7 +2,7 @@
 const path = require('path')
 
 module.exports = ({ file }) => {
-  const designWidth = file.includes(path.join('node_modules', 'vant')) ? 375 : 750
+  // const designWidth = file.includes(path.join('node_modules', 'vant')) ? 375 : 750
   return {
     plugins: {
       autoprefixer: {},
@@ -10,7 +10,7 @@ module.exports = ({ file }) => {
         // 要转化的单位
         unitToConvert: 'px',
         // 视口的宽度
-        viewportWidth: designWidth,
+        viewportWidth: 750,
         // 保留几位小数
         unitPrecision: 3,
         // 哪些属性需要修改
@@ -26,7 +26,7 @@ module.exports = ({ file }) => {
         // 替换包含vw单位的
         replace: true,
         // 排除转化文件
-        exclude: [],
+        exclude: [/node_modules/],
         // 添加横向转化值
         landscape: false,
         // 横向采用的单位
