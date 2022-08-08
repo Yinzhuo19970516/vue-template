@@ -1,47 +1,80 @@
-# vue-template
-## 项目说明文档地址
-https://www.yuque.com/docs/share/92b547ee-d40b-4e52-85ac-63395284c389?# 《Vue3项目模版搭建封装》
-## 掘金博客地址
-https://juejin.cn/post/7127130027992285197
+<p align="center">
+ <img alt="logo" src="https://vuejs.org/images/logo.png" width="100" height="100">
+</p>
+<h1 align="center" style='margin-top: -20px'>Vue-template</h1>
+<p align="center">基于vue3,vue-cli4二次封装的移动端框架</p>
+<p align="center">多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案</p>
 
-如果有任何疑问，可直接，wx联系我，工作时间秒回。
-## 微信公众号
-![](./image/img.png)
-## 个人微信
-<img src='./image/wx.jpg' width=40% />
+<p align="center">
+  🔥 <a href="https://www.yuque.com/docs/share/92b547ee-d40b-4e52-85ac-63395284c389">语雀文档地址</a>
+  🌈 <a href="https://juejin.cn/post/7127130027992285197">掘金项目介绍</a>
+</p>
 
-#### npm i
-#### npm run dev
-#### npm run init 生成新项目
+<p align="center">如果有任何疑问，可直接微信联系我，秒回。</p>
+<h3 align='center'>个人微信 & 微信公众号</h3>
+<p style='display:flex;justify-content: space-between;align-items: center'><img alt="logo" style='display:flex' src="https://pic.imgdb.cn/item/62f0afa516f2c2beb12463c3.jpg" width="40%" ><img alt="logo" style='display:flex;' src="https://pic.imgdb.cn/item/62f0b07916f2c2beb1287679.png" width="300" height="300"></p>
 
-# 前言
+<h3 align='center'>启动项目</h3> 
+```coffeescript
+npm i
 
-入职新公司后，发现代码仓库里，项目搭建的比较乱，每个项目使用的都不太一样，不利于统一规范化管理，我结合已有的**业务积累和优秀的实践经验**，搭建了一套**移动端模板项目**，在这里和大家做一个分享。
+npm run dev
 
-如果能有所收获，或者帮助到大家，那真是太好了！
+npm run init 生成新项目
+```
 
-源码地址：https://github.com/Yinzhuo19970516/vue-template
+## 功能点
 
-# 功能点
+本项目是基于**vue-cli4.x，webpack5**，对vue-cli提供的框架做的二次封装，主要封装的功能点多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案等等
 
-本项目是基于**vue-cli4.x，webpack5**，对vue-cli提供的框架做的二次封装，主要封装的功能点主要有以下
+<span id="top">目录如下：</span>
+- [👋 多入口打包](#pages)
+  - [适用场景](#pages-1)
+  - [项目结构](#pages-2)
+  - [核心实现](#pages-3) 
+- [👌自动化生成项目基本模版](#init)
+  - [自动化命令](#init-1)
+  - [代码实现](#init-2)
+- [🤘Pinia状态管理库](#pinia)
+  - [Pinia优势](#pinia-1)
+  - [Pinia和Vuex的代码分割机制](#pinia-2)
+  - [基本使用](#pinia-3)
+- [🤏 持久化存储插件封装](#piniaPlugin)
+  - [代码实现](#piniaPlugin-1)
+  - [全局引入](#piniaPlugin-2)
+  - [参考库](#piniaPlugin-3)
+- [👍 路由动画的封装](#router)
+  - [封装思路](#router-1)
+  - [代码实现](#router-2)
+  - [效果对比](#router-3)
+- [🤝 axios 二次封装](#axios)
+  - [封装目的](#axios-1)
+  - [通用能力](#axios-2)
+  - [代码实现](#axios-3)
+- [💪 viewport 适配方案](#viewport)
+  - [postcss配置](#viewport-1)
+  - [对比rem](#viewport-2)
+- [✌️ less sass变量，函数的处理](#less)    
+- [☝️ 配置多环境变量](#env)
+- [👏 vconsole.js](#vconsolejs)
+- [✍️ 链式操作符](#babel)
+- [💅 入口加载动画](#loading)
 
-- [x]   多入口打包
-- [x]    自动化生成项目基本模版
-- [x]    pinia状态管理库
-- [x]    持久化存储插件封装
-- [x]    路由动画的封装
-- [x]    axios 二次封装
-- [x]    less sass变量，函数的处理
-- [x]    viewport 适配方案
-- [x]    配置多环境变量
-- [x]    vconsole.js
-- [x]    链式操作符
-- [x]    入口加载动画
+如果对你有帮助送我一颗珍贵的小星星（づ￣3￣）づ╭❤～
+### 更新日志
+2022.8.8 优化readme格式&增加progress库的使用&删除viewport vant配置
+### 后期规划
+-   路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix
+-   统一的格式控制管理，能够适用于webstrom 和 vscode
+-   ~~多入口时选择编译单个入口文件~~ （**已完成**）
+-   整个项目cli化，可以像vue-cli那样，直接一行命令下载下来
+-   增量编译，随着项目变大，每次发布把所有项目都打包一遍是不现实的，能否有一个方案只编译有修改部分，这样编译效率大大提高
+-   common 基础方法库 打包封装
+-   使用vite搭建组件库componet
 
-## 多入口打包
+##<span id="pages">👋 多入口打包</span>
 
-### 适用场景
+###<span id="pages-1">适用场景</span>
 
 移动端开发，一般情况，我们项目开发只需要一个配置一个入口，一个模版文件。
 
@@ -60,7 +93,7 @@ https://juejin.cn/post/7127130027992285197
 
 >如果我们全部使用单入口，也就是vue官方提供的框架，可以设想一下，如果是活动页面，我们把所有活动的页面都定义在一个入口里，router，store全部在一块，项目耦合会越来越严重，路由名也会重合率越来越高！
 
-### 项目结构
+###<span id="pages-2">项目结构</span>
 
 如下图所示，我们在src目录下面，新增了module目录，用来存放我们的多个项目入口，page1 和page2 就是我用来演示的两个项目文件。
 
@@ -146,7 +179,7 @@ module.exports = {
  }
 ```
 
-### 核心代码实现
+###<span id="pages-3">核心代码实现</span>
 
 ```js
 const entryName = ''
@@ -206,17 +239,19 @@ console.log(pages)
 }
 ```
 
-### 打包目录
+#### 打包目录
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01423ebb95d64c69a37a8401aa3709d2~tplv-k3u1fbpfcp-zoom-1.image)
 
-## 自动化生成项目基本模版
+[▲ 回顶部](#top)
+
+##<span id="init">👌自动化生成项目基本模版</span>
 
 当我们在新建项目时，一般是手动新建文件夹，然后定义项目名字，新建入口文件，index.html，.vue文件，新建router store文件等等，这个是每次新建时必不可少的步骤。
 
 其实，初始化项目的时候，新建的内容都差不多，如果我们能用一行指令，帮助我们生成这些模版文件，我们只需要定义个文件名字，可以显著提升开发体验。
 
-### 新建项目指令
+###<span id="init-1">新建项目指令</span>
 
 我在package.json里新增了一个指令 init
 
@@ -256,9 +291,9 @@ console.log(pages)
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29a328c782ba46f9b370fcafd7e9a1e7~tplv-k3u1fbpfcp-zoom-1.image)
 
-### 代码实现
+### <span id="init-2">代码实现</span>
 
-下图是initTempate 文件结构
+下图是 initTemplate 文件结构
 
 实现比较简单
 
@@ -380,7 +415,9 @@ const createProject = () => {
 createProject()
 ```
 
-## Pinia状态管理
+[▲ 回顶部](#top)
+
+##<span id="pinia">🤘Pinia状态管理</span>
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fb1464071e543e3a114d2fb41fe9d9e~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -388,7 +425,7 @@ createProject()
 
 Pinia /piːnjʌ/ 中文名：皮你啊
 
-### Pinia 优势
+###<span id="pinia-1">Pinia 优势</span>
 
 **1.Pinia是一个全新的Vue状态管理库，是Vuex的代替者，尤雨溪强势推荐**
 
@@ -425,7 +462,7 @@ Pinia /piːnjʌ/ 中文名：皮你啊
 1.  **Actions**: 用于修改数据，有点儿类似 methods 的概念；
 1.  **Plugins**: Pinia 插件。
 
-### Pinia与Vuex代码分割机制
+###<span id="pinia-2">Pinia与Vuex代码分割机制</span>
 
 举个例子：某项目有**3个store「user、job、pay」**，另外有**2个路由页面「首页、个人中心页」**，**首页用到job store，个人中心页用到了user store**，分别用Pinia和Vuex对其状态管理。
 
@@ -449,7 +486,7 @@ Pinia /piːnjʌ/ 中文名：皮你啊
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be30659d6bac455184e8c61318f1dd3a~tplv-k3u1fbpfcp-zoom-1.image)
 
-### 基本使用
+###<span id="pinia-3">基本使用</span>
 
 定义state，getters 和vuex基本一样，具体使用可以去官网学
 
@@ -476,9 +513,6 @@ piniaStore.main().$patch({
     configInfo: data
 })
 ```
-
-
-
 
 ```
 //store.js
@@ -512,7 +546,9 @@ storeVuex.commit('increment')
 
 **Pinia拥有更简洁的语法， 扁平化的代码编排，符合Vue3 的 Composition api**
 
-## Pinia数据持久化插件
+[▲ 回顶部](#top)
+
+##<span id="piniaPlugin">🤏Pinia数据持久化插件</span>
 
 ### 使用场景
 
@@ -571,7 +607,7 @@ export function setSessionStorage(key: string, val: any): void {
 }
 ```
 
-### 代码实现
+###<span id="piniaPlugin-1">代码实现</span>
 
 核心就是，Pinia的监听API **`subscribe`**
 
@@ -632,7 +668,7 @@ const plugin = (options: Options): any => {
 }
 ```
 
-### 全局引入
+###<span id="piniaPlugin-2">全局引入</span>
 
 这个是我定义的store文件，里面定义了三个store,分别为 `main，test，test1`
 
@@ -712,7 +748,7 @@ pinia.use(
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9993f3e214546dbb89d3187367c3c4a~tplv-k3u1fbpfcp-zoom-1.image)
 
 
-### 参考库
+###<span id="piniaPlugin-3">参考库</span>
 
 <https://github.com/Seb-L/pinia-plugin-persist>
 
@@ -758,7 +794,9 @@ export const useUserStore = defineStore('storeUser', {
 
 有这样一个插件，**就可以在全局统一配置，增删改查在入口文件统一管理。**
 
-## 路由动画的封装
+[▲ 回顶部](#top)
+
+##<span id="router">👍路由动画的封装</span>
 
 Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效果的的方法。
 
@@ -768,7 +806,7 @@ Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效�
 
 页面切换的动画时间的同时，下一个页面初始化也在进行了，对用户体验来说，可以有效避免下一个页面的加载dom，初始化页面的时间。
 
-### 封装思路
+###<span id="router-1">封装思路</span>
 
 -   使用transition方式给根路由设置全局动画
 
@@ -776,7 +814,7 @@ Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效�
 -   在入口页面的setup 中，在路由守卫中，根据level的大小，设置相应的动画
 -   定义相应的动画类样式
 
-### 代码
+###<span id="router-2">代码</span>
 
 css写出动画效果
 
@@ -814,7 +852,7 @@ export default {
 }
 ```
 
-### 效果展示
+###<span id="router-3">效果展示</span>
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa8c3df8d3224698abcc063663a5072b~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -832,9 +870,11 @@ export default {
 
 [4 个 Vue 路由过渡动效](<4 个 Vue 路由过渡动效>)
 
-## axios 二次封装
+[▲ 回顶部](#top)
 
-### 封装目的
+##<span id="axios">🤝axios 二次封装</span>
+
+###<span id="axios-1">封装目的</axios>
 
 -   降低心智负担
 -   减少冗余代码
@@ -854,7 +894,7 @@ export default {
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/deef5ec4ab8b49309148c6a7a1399b51~tplv-k3u1fbpfcp-zoom-1.image)
 
-### 通用能力
+###<span id="axios-2">通用能力</span>
 
 这里说明一下我封装时候的思路和想法
 
@@ -874,9 +914,7 @@ export default {
 -   默认开启，可配置关闭
 -   统一管理，业务中不用再去关心这个逻辑
 
-
-### 代码实现
-
+###<span id="axios-3">代码实现</span>
 
 #### 基础类型
 
@@ -1028,7 +1066,9 @@ this.instance.interceptors.response.use(
 
 请求拦截器中一般注入token，我的代码中暂时没有做处理
 
-## less sass的优化处理
+[▲ 回顶部](#top)
+
+##<span id="less">✌️less sass的优化处理</span>
 
 ### 背景
 
@@ -1105,11 +1145,11 @@ pluginOptions: {
 至于为什么，在入口文件引入了，不配置的话，还不能使用less，或者sass的。
 **这个深层原因，我猜测和vue的框架设计有关，有兴趣可以深入研究**
 
-## viewport 适配方案
+##💪<span id="viewport">viewport 适配方案</span>
 
 postcss-px-to-viewport是一款 postcss 插件，用于将单位转化为 vw， 现在很多浏览器对vw的支持都很好，适配首选方案。
 
-### PostCSS 配置
+###<span id="viewport-1">PostCSS 配置</span>
 
 下面提供了一份基本的 postcss 配置，可以在此配置的基础上根据项目需求进行修改
 
@@ -1161,7 +1201,7 @@ module.exports = ({ file }) => {
 
 你只使用无前缀的 CSS 规则即可
 
-### 对比rem
+###<span id="viewport-2">对比rem</span>
 
 下面这个是rem 适配方案肯定会有的代码
 
@@ -1196,7 +1236,9 @@ const designWidth = file.includes(path.join('node_modules', 'vant')) ? 375 : 750
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/684c16e77d5144f1b92225985dbbb70a~tplv-k3u1fbpfcp-zoom-1.image)
 
-## 配置多环境变量
+[▲ 回顶部](#top)
+
+##<span id="env">☝️ 配置多环境变量</span>
 
 ### 命令
 
@@ -1234,7 +1276,9 @@ VUE_APP_PUBLIC_PATH=/
 VUE_APP_ACTIVITY_SERVER_TARGET = xxx
 ```
 
-## 兼容性处理方案
+[▲ 回顶部](#top)
+
+##<span id="babel">✍️兼容性处理方案</span>
 
 ### 可选链操作符和空值合并操作符的兼容处理
 
@@ -1286,7 +1330,7 @@ module.exports = {
 transpileDependencies:['crypto-js']
 ```
 
-### vConsole.js的兼容处理
+###<span id="vconsolejs">👏vConsole.js的兼容处理</span>
 
 vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试面板。
 
@@ -1316,10 +1360,11 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 </script>
 ```
 
+[▲ 回顶部](#top)
 
 ## 其他
 
-### 入口加载动画
+###<span id="loading">💅入口加载动画</span>
 
 没有挂在dom 时，先加载loading动画，也可以加载svg，JSON格式动画，或者骨架屏，持续优化用户体验
 
@@ -1328,6 +1373,8 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
   <img class="no-app-img-loading" src="data:image/gif;base64,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" alt="">
 </div>
 ```
+
+[▲ 回顶部](#top)
 
 # 总结
 
@@ -1348,20 +1395,10 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 
 # 后期规划
 
--   路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix
--   统一的格式控制管理，能够适用于webstrom 和 vscode
--   多入口时选择编译单个入口文件
--   整个项目cli化，可以像vue-cli那样，直接一行命令下载下来
--   增量编译，随着项目变大，每次发布把所有项目都打包一遍是不现实的，能否有一个方案只编译有修改部分，这样编译效率大大提高
--   common 基础方法库 打包封装
--   使用vite搭建组件库componet
+
 
 > 如果屏幕前的你读完了，相信也读了很久，有问题，有疑问的地方，欢迎联系我，我们一起交流！点个赞就更好了。
 
-## 微信公众号
-![](./image/img.png)
-## 个人微信
-<img src='./image/wx.jpg' width=40% />
 
 
 
