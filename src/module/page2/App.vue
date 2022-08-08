@@ -7,3 +7,8 @@
     </transition>
   </router-view>
 </template>
+<style>
+#nprogress .bar{
+  background:red !important;
+}
+</style>
