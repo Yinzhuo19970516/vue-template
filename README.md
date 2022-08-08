@@ -14,13 +14,14 @@
 <h3 align='center'>个人微信 & 微信公众号</h3>
 <p style='display:flex;justify-content: space-between;align-items: center'><img alt="logo" style='display:flex' src="https://pic.imgdb.cn/item/62f0afa516f2c2beb12463c3.jpg" width="40%" ><img alt="logo" style='display:flex;' src="https://pic.imgdb.cn/item/62f0b07916f2c2beb1287679.png" width="300" height="300"></p>
 
-<h3 align='center'>启动项目</h3> 
-```coffeescript
+<h3>启动项目</h3> 
+
+```
 npm i
 
 npm run dev
 
-npm run init 生成新项目
+npm run init // 生成新项目
 ```
 
 ## 功能点
@@ -61,9 +62,13 @@ npm run init 生成新项目
 - [💅 入口加载动画](#loading)
 
 如果对你有帮助送我一颗珍贵的小星星（づ￣3￣）づ╭❤～
+
 ### 更新日志
+
 2022.8.8 优化readme格式&增加progress库的使用&删除viewport vant配置
+
 ### 后期规划
+
 -   路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix
 -   统一的格式控制管理，能够适用于webstrom 和 vscode
 -   ~~多入口时选择编译单个入口文件~~ （**已完成**）
@@ -72,9 +77,9 @@ npm run init 生成新项目
 -   common 基础方法库 打包封装
 -   使用vite搭建组件库componet
 
-##<span id="pages">👋 多入口打包</span>
+## <span id="pages">👋 多入口打包</span>
 
-###<span id="pages-1">适用场景</span>
+### <span id="pages-1">适用场景</span>
 
 移动端开发，一般情况，我们项目开发只需要一个配置一个入口，一个模版文件。
 
@@ -93,7 +98,7 @@ npm run init 生成新项目
 
 >如果我们全部使用单入口，也就是vue官方提供的框架，可以设想一下，如果是活动页面，我们把所有活动的页面都定义在一个入口里，router，store全部在一块，项目耦合会越来越严重，路由名也会重合率越来越高！
 
-###<span id="pages-2">项目结构</span>
+### <span id="pages-2">项目结构</span>
 
 如下图所示，我们在src目录下面，新增了module目录，用来存放我们的多个项目入口，page1 和page2 就是我用来演示的两个项目文件。
 
@@ -131,6 +136,7 @@ vue-cli 接收一个参数**pages**，用来控制输入文件，输出文件
 page 的入口，模板来源， 在 dist/index.html 的输出
 
 下面这端代码是vue-cli的官方说明
+
 ```js
 module.exports = {
   pages: {
@@ -179,7 +185,7 @@ module.exports = {
  }
 ```
 
-###<span id="pages-3">核心代码实现</span>
+### <span id="pages-3">核心代码实现</span>
 
 ```js
 const entryName = ''
@@ -245,13 +251,13 @@ console.log(pages)
 
 [▲ 回顶部](#top)
 
-##<span id="init">👌自动化生成项目基本模版</span>
+## <span id="init">👌自动化生成项目基本模版</span>
 
 当我们在新建项目时，一般是手动新建文件夹，然后定义项目名字，新建入口文件，index.html，.vue文件，新建router store文件等等，这个是每次新建时必不可少的步骤。
 
 其实，初始化项目的时候，新建的内容都差不多，如果我们能用一行指令，帮助我们生成这些模版文件，我们只需要定义个文件名字，可以显著提升开发体验。
 
-###<span id="init-1">新建项目指令</span>
+### <span id="init-1">新建项目指令</span>
 
 我在package.json里新增了一个指令 init
 
@@ -417,7 +423,7 @@ createProject()
 
 [▲ 回顶部](#top)
 
-##<span id="pinia">🤘Pinia状态管理</span>
+## <span id="pinia">🤘Pinia状态管理</span>
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fb1464071e543e3a114d2fb41fe9d9e~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -425,7 +431,7 @@ createProject()
 
 Pinia /piːnjʌ/ 中文名：皮你啊
 
-###<span id="pinia-1">Pinia 优势</span>
+### <span id="pinia-1">Pinia 优势</span>
 
 **1.Pinia是一个全新的Vue状态管理库，是Vuex的代替者，尤雨溪强势推荐**
 
@@ -462,7 +468,7 @@ Pinia /piːnjʌ/ 中文名：皮你啊
 1.  **Actions**: 用于修改数据，有点儿类似 methods 的概念；
 1.  **Plugins**: Pinia 插件。
 
-###<span id="pinia-2">Pinia与Vuex代码分割机制</span>
+### <span id="pinia-2">Pinia与Vuex代码分割机制</span>
 
 举个例子：某项目有**3个store「user、job、pay」**，另外有**2个路由页面「首页、个人中心页」**，**首页用到job store，个人中心页用到了user store**，分别用Pinia和Vuex对其状态管理。
 
@@ -486,7 +492,7 @@ Pinia /piːnjʌ/ 中文名：皮你啊
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be30659d6bac455184e8c61318f1dd3a~tplv-k3u1fbpfcp-zoom-1.image)
 
-###<span id="pinia-3">基本使用</span>
+### <span id="pinia-3">基本使用</span>
 
 定义state，getters 和vuex基本一样，具体使用可以去官网学
 
@@ -495,7 +501,7 @@ Pinia /piːnjʌ/ 中文名：皮你啊
 明显pinia 的代码量更少，逻辑更清晰，心智负担更小
 
 ```
-//store.js
+// store.js
 import { defineStore } from 'pinia'
 
 export const main = defineStore('main', {
@@ -515,7 +521,7 @@ piniaStore.main().$patch({
 ```
 
 ```
-//store.js
+// store.js
 import { createStore } from 'vuex'
 
 export const store = createStore({
@@ -548,7 +554,7 @@ storeVuex.commit('increment')
 
 [▲ 回顶部](#top)
 
-##<span id="piniaPlugin">🤏Pinia数据持久化插件</span>
+## <span id="piniaPlugin">🤏Pinia数据持久化插件</span>
 
 ### 使用场景
 
@@ -607,7 +613,7 @@ export function setSessionStorage(key: string, val: any): void {
 }
 ```
 
-###<span id="piniaPlugin-1">代码实现</span>
+### <span id="piniaPlugin-1">代码实现</span>
 
 核心就是，Pinia的监听API **`subscribe`**
 
@@ -668,7 +674,7 @@ const plugin = (options: Options): any => {
 }
 ```
 
-###<span id="piniaPlugin-2">全局引入</span>
+### <span id="piniaPlugin-2">全局引入</span>
 
 这个是我定义的store文件，里面定义了三个store,分别为 `main，test，test1`
 
@@ -748,7 +754,7 @@ pinia.use(
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9993f3e214546dbb89d3187367c3c4a~tplv-k3u1fbpfcp-zoom-1.image)
 
 
-###<span id="piniaPlugin-3">参考库</span>
+### <span id="piniaPlugin-3">参考库</span>
 
 <https://github.com/Seb-L/pinia-plugin-persist>
 
@@ -796,7 +802,7 @@ export const useUserStore = defineStore('storeUser', {
 
 [▲ 回顶部](#top)
 
-##<span id="router">👍路由动画的封装</span>
+## <span id="router">👍路由动画的封装</span>
 
 Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效果的的方法。
 
@@ -806,7 +812,7 @@ Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效�
 
 页面切换的动画时间的同时，下一个页面初始化也在进行了，对用户体验来说，可以有效避免下一个页面的加载dom，初始化页面的时间。
 
-###<span id="router-1">封装思路</span>
+### <span id="router-1">封装思路</span>
 
 -   使用transition方式给根路由设置全局动画
 
@@ -814,7 +820,7 @@ Vue 路由过渡动画是对 Vue 程序一种快速简便的增加个性化效�
 -   在入口页面的setup 中，在路由守卫中，根据level的大小，设置相应的动画
 -   定义相应的动画类样式
 
-###<span id="router-2">代码</span>
+### <span id="router-2">代码</span>
 
 css写出动画效果
 
@@ -852,7 +858,7 @@ export default {
 }
 ```
 
-###<span id="router-3">效果展示</span>
+### <span id="router-3">效果展示</span>
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa8c3df8d3224698abcc063663a5072b~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -872,9 +878,9 @@ export default {
 
 [▲ 回顶部](#top)
 
-##<span id="axios">🤝axios 二次封装</span>
+## <span id="axios">🤝axios 二次封装</span>
 
-###<span id="axios-1">封装目的</axios>
+### <span id="axios-1">封装目的</axios>
 
 -   降低心智负担
 -   减少冗余代码
@@ -894,7 +900,7 @@ export default {
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/deef5ec4ab8b49309148c6a7a1399b51~tplv-k3u1fbpfcp-zoom-1.image)
 
-###<span id="axios-2">通用能力</span>
+### <span id="axios-2">通用能力</span>
 
 这里说明一下我封装时候的思路和想法
 
@@ -914,7 +920,7 @@ export default {
 -   默认开启，可配置关闭
 -   统一管理，业务中不用再去关心这个逻辑
 
-###<span id="axios-3">代码实现</span>
+### <span id="axios-3">代码实现</span>
 
 #### 基础类型
 
@@ -1068,7 +1074,7 @@ this.instance.interceptors.response.use(
 
 [▲ 回顶部](#top)
 
-##<span id="less">✌️less sass的优化处理</span>
+## <span id="less">✌️less sass的优化处理</span>
 
 ### 背景
 
@@ -1145,11 +1151,11 @@ pluginOptions: {
 至于为什么，在入口文件引入了，不配置的话，还不能使用less，或者sass的。
 **这个深层原因，我猜测和vue的框架设计有关，有兴趣可以深入研究**
 
-##💪<span id="viewport">viewport 适配方案</span>
+## 💪<span id="viewport">viewport 适配方案</span>
 
 postcss-px-to-viewport是一款 postcss 插件，用于将单位转化为 vw， 现在很多浏览器对vw的支持都很好，适配首选方案。
 
-###<span id="viewport-1">PostCSS 配置</span>
+### <span id="viewport-1">PostCSS 配置</span>
 
 下面提供了一份基本的 postcss 配置，可以在此配置的基础上根据项目需求进行修改
 
@@ -1201,7 +1207,7 @@ module.exports = ({ file }) => {
 
 你只使用无前缀的 CSS 规则即可
 
-###<span id="viewport-2">对比rem</span>
+### <span id="viewport-2">对比rem</span>
 
 下面这个是rem 适配方案肯定会有的代码
 
@@ -1238,7 +1244,7 @@ const designWidth = file.includes(path.join('node_modules', 'vant')) ? 375 : 750
 
 [▲ 回顶部](#top)
 
-##<span id="env">☝️ 配置多环境变量</span>
+## <span id="env">☝️ 配置多环境变量</span>
 
 ### 命令
 
@@ -1278,7 +1284,7 @@ VUE_APP_ACTIVITY_SERVER_TARGET = xxx
 
 [▲ 回顶部](#top)
 
-##<span id="babel">✍️兼容性处理方案</span>
+## <span id="babel">✍️兼容性处理方案</span>
 
 ### 可选链操作符和空值合并操作符的兼容处理
 
@@ -1330,7 +1336,7 @@ module.exports = {
 transpileDependencies:['crypto-js']
 ```
 
-###<span id="vconsolejs">👏vConsole.js的兼容处理</span>
+### <span id="vconsolejs">👏vConsole.js的兼容处理</span>
 
 vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试面板。
 
@@ -1364,7 +1370,7 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 
 ## 其他
 
-###<span id="loading">💅入口加载动画</span>
+### <span id="loading">💅入口加载动画</span>
 
 没有挂在dom 时，先加载loading动画，也可以加载svg，JSON格式动画，或者骨架屏，持续优化用户体验
 
@@ -1393,12 +1399,11 @@ vConsole是一个轻量、可拓展、针对手机网页的前端开发者调试
 
 目前来说，是能够支持移动端的大多数业务，也希望能够帮助到大家业务开发！
 
-# 后期规划
-
-
-
 > 如果屏幕前的你读完了，相信也读了很久，有问题，有疑问的地方，欢迎联系我，我们一起交流！点个赞就更好了。
 
+<p align="center">如果有任何疑问，可直接微信联系我，秒回。</p>
+<h3 align='center'>个人微信 & 微信公众号</h3>
+<p style='display:flex;justify-content: space-between;align-items: center'><img alt="logo" style='display:flex' src="https://pic.imgdb.cn/item/62f0afa516f2c2beb12463c3.jpg" width="40%" ><img alt="logo" style='display:flex;' src="https://pic.imgdb.cn/item/62f0b07916f2c2beb1287679.png" width="300" height="300"></p>
 
 
 
