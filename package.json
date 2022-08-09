@@ -1,7 +1,7 @@
 {
   "name": "vue-tamplate",
   "version": "1.0.0",
-  "description": "vitepress搭建的项目说明文档1",
+  "description": "vue-tamplate搭建的项目说明文档",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs --open",

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="333de07e-2e38-421f-9a79-f68508a7eeb3" name="默认变更列表" comment="" />
+    <list default="true" id="333de07e-2e38-421f-9a79-f68508a7eeb3" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/image/gzh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/image/wx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/all.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/axios.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/babel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/env.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/init.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/less.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/pages.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/pinia.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/piniaPlugin.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/router.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/viewport.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/page/why.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/about/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mine/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +61,8 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/image" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/module/page2" />
       <recent name="$PROJECT_DIR$/src/module/page1" />
     </key>
