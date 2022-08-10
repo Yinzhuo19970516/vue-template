@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="333de07e-2e38-421f-9a79-f68508a7eeb3" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/image/gzh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/image/wx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/all.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/axios.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/babel.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/env.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/init.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/less.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/pages.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/pinia.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/piniaPlugin.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/router.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/viewport.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/page/why.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/about/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/about/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mine/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/page/router.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/page/router.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

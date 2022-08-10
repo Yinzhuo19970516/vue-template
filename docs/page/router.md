@@ -19,11 +19,11 @@
 
 css写出动画效果
 
-根组件 App.vue，监听路由的变化
+根组件 `App.vue`，监听路由的变化
 
 **如果to索引大于from索引,使用前进的动画,反之使用后退的动画**
 
-level 可以使用数字，也可以字母，也可以数字加字母，能体现大小关系即可
+`level` 可以使用数字，也可以字母，也可以数字加字母，能体现大小关系即可
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7642c9bfb3984d9d866784f2892f4aec~tplv-k3u1fbpfcp-zoom-1.image)
 

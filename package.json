@@ -1,7 +1,7 @@
 {
   "name": "vue-tamplate",
   "version": "1.0.0",
-  "description": "vue-tamplate搭建的项目说明文档",
+  "description": "vue-template搭建的项目说明文档",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs --open",
@@ -9,5 +9,9 @@
     "serve": "vitepress serve docs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  }
 }

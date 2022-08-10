@@ -1,31 +1,38 @@
-module.exports = {
+export default {
   title: 'vue-template',// 网站标题
   description: 'vue-cli/二次封装/vue3/axios/多入口打包', //网站描述
-  base: '/', //  部署时的路径 默认 /  可以使用二级地址 /base/
+  base: '/vue-template/', //  部署时的路径 默认 /  可以使用二级地址 /base/
   repo: '',
+  ignoreDeadLinks: true,
   markdown: {
     theme: 'material-palenight',
     lineNumbers: true
   },
-  editLink: {
-    pattern: 'https://github.com/Yinzhuo19970516/vue-template',
-    text: 'Edit this page on GitHub'
-  },
-  socialLinks: [
-    { icon: 'github', link: 'https://github.com/Yinzhuo19970516/vue-template' }
-  ],
-
-  ignoreDeadLinks: true,
   lastUpdated: true,
   appearance: true,
   // 主题配置
+
   themeConfig: {
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Yinzhuo19970516/vue-template' },
+      { icon: 'slack', link: 'https://juejin.cn/user/1011206428301774' }
+    ],
+    // editLink: {
+    //   pattern: 'https://github.com/Yinzhuo19970516/vue-template',
+    //   text: 'Edit this page on GitHub'
+    // },
+    lastUpdatedText: '更新时间',
     siteTitle: 'vue-template',
     nav: [
       { text: '首页', link: '/' },
       { text: '项目简介', link: '/page/index' },
       { text: '更新日志', link: '/about/index' }
     ],
+    docFooter: {
+      prev: '上一节',
+      next: '下一节'
+    },
     // 侧边导航
     sidebar: [
       {
@@ -46,6 +53,6 @@ module.exports = {
         ]
       }
     ],
-    outlineTitle: 'In hac pagina'
+    outlineTitle: '目录'
   }
 }
