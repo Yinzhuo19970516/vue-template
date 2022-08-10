@@ -69,6 +69,6 @@ export default {
 
 可参考大佬写的过渡效果，有兴趣可以再研究研究
 
-[4 个 Vue 路由过渡动效](<4 个 Vue 路由过渡动效>)
+[4 个 Vue 路由过渡动效](https://juejin.cn/post/6963205355702583303)
 
 [▲ 回目录](/page/index.html)
