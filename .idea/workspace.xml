@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="333de07e-2e38-421f-9a79-f68508a7eeb3" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/dist/assets/page_router.md.13fbc8d2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/dist/assets/page_router.md.13fbc8d2.lean.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/assets/page_router.md.6bb8ce46.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/assets/page_router.md.6bb8ce46.lean.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/hashmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/hashmap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/axios.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/axios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/babel.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/babel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/env.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/env.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/init.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/init.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/less.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/less.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/pages.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/pages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/pinia.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/pinia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/piniaPlugin.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/piniaPlugin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/router.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/router.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/viewport.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/viewport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/dist/page/why.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/dist/page/why.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

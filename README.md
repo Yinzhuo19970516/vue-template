@@ -2,7 +2,7 @@
 
 <p align="center">
   🔥 <a href="https://vitepress.vuejs.org/">Vitepress文档地址</a>
-    🔥 <a href="https://www.yuque.com/docs/share/92b547ee-d40b-4e52-85ac-63395284c389">博客地址</a>🔥
+  🔥 <a href="https://yinzhuo19970516.github.io/">项目文档</a>🔥
 </p>
 
 <h3>启动项目</h3>
@@ -14,4 +14,8 @@ npm run dev
 
 ```
 npm run build
+```
+<h3>发布修改</h3>
+```
+zsh deploy.sh
 ```

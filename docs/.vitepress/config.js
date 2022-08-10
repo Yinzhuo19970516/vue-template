@@ -27,7 +27,7 @@ export default {
     nav: [
       { text: '首页', link: '/' },
       { text: '项目简介', link: '/page/index' },
-      { text: '更新日志', link: '/about/index' }
+      { text: '更新日志', link: 'https://github.com/Yinzhuo19970516/vue-template/blob/main/CHANGELOG.md' }
     ],
     docFooter: {
       prev: '上一节',
