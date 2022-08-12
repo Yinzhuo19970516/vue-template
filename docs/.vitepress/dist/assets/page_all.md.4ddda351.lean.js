@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a as p}from"./app.cd7730e1.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"page/all.md","lastUpdated":1660109184000}'),s={name:"page/all.md"},o=p("",8),r=[o];function _(c,n,i,l,d,m){return t(),a("div",null,r)}var f=e(s,[["render",_]]);export{u as __pageData,f as default};

@@ -1,7 +1,6 @@
 export default {
   title: 'vue-template',// 网站标题
   description: 'vue-cli/二次封装/vue3/axios/多入口打包', //网站描述
-  base: '/vue-template/', //  部署时的路径 默认 /  可以使用二级地址 /base/
   repo: '',
   ignoreDeadLinks: true,
   markdown: {

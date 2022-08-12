@@ -1,4 +1,4 @@
----
+~~---
 
 layout: home
 title: vue-template
@@ -15,7 +15,7 @@ hero:
     - theme: alt
       text: 访问github
       link: https://github.com/Yinzhuo19970516/vue-template
----
+---~~
 <div class="features">
 <p align="center" style='line-height: 36px;font-weight: 500;color: #767676;
     font-size: 20px;'>如果有任何疑问，可直接微信联系我，秒回。</p>
