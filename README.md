@@ -7,7 +7,7 @@
 
 <p align="center">
   🔥 <a href="https://yinzhuo19970516.github.io">项目文档地址</a>
-  🌈 <a href="./CHANGELOG.md">掘金项目介绍</a>
+  🌈 <a href="./CHANGELOG.md">项目更新记录</a>
 </p>
 
 <h3>启动项目</h3> 
