@@ -7,7 +7,7 @@
 
 <p align="center">
   🔥 <a href="https://yinzhuo19970516.github.io">项目文档地址</a>
-  🌈 <a href="https://juejin.cn/post/7127130027992285197">掘金项目介绍</a>
+  🌈 <a href="./CHANGELOG.md">掘金项目介绍</a>
 </p>
 
 <h3>启动项目</h3> 
@@ -22,15 +22,16 @@ npm run init // 生成新项目
 
 ## 功能点
 
-本项目是基于**vue-cli4.x，webpack5**，对vue-cli提供的框架做的二次封装，主要封装的功能点多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案等等
+本项目是基于**pnpm，vue-cli4.x，webpack5**，对vue-cli提供的框架做的二次封装，主要封装的功能点多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案等等
 
 主要功能点如下：
 
 详情可查看项目文档：https://yinzhuo19970516.github.io/
 
+- [💪 使用pnpm管理包]
 - [👋 多入口打包]
-- [👌自动化生成项目基本模版]
-- [🤘Pinia状态管理库]
+- [👌 自动化生成项目基本模版]
+- [🤘 Pinia状态管理库]
 - [🤏 持久化存储插件封装]
 - [👍 路由动画的封装]
 - [🤝 axios 二次封装]
