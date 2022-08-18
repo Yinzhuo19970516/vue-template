@@ -38,6 +38,7 @@ export default {
         text: '项目简介',
         items: [
           { text: '为什么要写这个项目', link: '/page/why' },
+          { text: '使用pnpm管理包', link: '/page/pnpm' },
           { text: '多入口打包', link: '/page/pages' },
           { text: '自动化生成项目基本模版', link: '/page/init' },
           { text: 'Pinia',link:'/page/pinia'},
