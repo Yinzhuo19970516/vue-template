@@ -48,7 +48,11 @@ npm run init // 生成新项目
 
 <p align="center">如果对你有帮助，可以送我一颗珍贵的小星星（づ￣3￣）づ╭❤～</p>
 <p align="center">如果有任何疑问，可直接微信联系我，秒回。</p>
-<p style='display:flex;justify-content:center;align-items: center'>
-<img alt="logo" style='display:flex;' src="../image/wx.png" width="400">
-<img alt="logo" style='display:flex;' src="../image/gzh.png" width="400">
+<p align="center" style='line-height: 36px;font-weight: 500;color: #767676;
+    font-size: 1vw;'>如果有任何疑问，可直接微信联系我，秒回。</p>
+<p align="center" style="line-height: 36px;font-weight: 500;color: #767676;
+    font-size: 1vw;">个人微信 & 微信公众号</p>
+<p style='display:flex;justify-content: center;align-items: center;flex-wrap: wrap'>
+<img alt="logo" style='display:flex;text-align:left;width:30vw' src="../image/wx.png">
+<img alt="logo" style='display:flex;text-align:right;width:30vw' src="../image/gzh.png">
 </p>

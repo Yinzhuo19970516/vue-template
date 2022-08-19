@@ -15,15 +15,15 @@ hero:
     - theme: alt
       text: 访问github
       link: https://github.com/Yinzhuo19970516/vue-template
----~~
+---
 <div class="features">
 <p align="center" style='line-height: 36px;font-weight: 500;color: #767676;
-    font-size: 20px;'>如果有任何疑问，可直接微信联系我，秒回。</p>
+    font-size: 1vw;'>如果有任何疑问，可直接微信联系我，秒回。</p>
 <p align="center" style="line-height: 36px;font-weight: 500;color: #767676;
-    font-size: 20px;">个人微信 & 微信公众号</p>
-<p style='display:flex;justify-content: center;align-items: center'>
-<img alt="logo" style='display:flex;text-align:left' src="./image/wx.png" width="400">
-<img alt="logo" style='display:flex;text-align:right' src="./image/gzh.png" width="400">
+    font-size: 1vw;">个人微信 & 微信公众号</p>
+<p style='display:flex;justify-content: center;align-items: center;flex-wrap: wrap'>
+<img alt="logo" style='display:flex;text-align:left;width:30vw' src="./image/wx.png">
+<img alt="logo" style='display:flex;text-align:right;width:30vw' src="./image/gzh.png">
 </p>
 </div>
 
