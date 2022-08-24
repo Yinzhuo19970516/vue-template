@@ -51,7 +51,7 @@ const Core = {
 		},
 		del(name: string, path?: string, domain?: string, secure?: string): void {
 			this.set(name, '', -1, path, domain, secure)
-		},
+		}
 	},
 	Object: {
 		isUndefined(object: unknown): boolean {
@@ -106,8 +106,8 @@ const Core = {
 				}
 			})
 			return result.join('&')
-		},
-	},
+		}
+	}
 }
 
 export const CoreCookie = Core.Cookie

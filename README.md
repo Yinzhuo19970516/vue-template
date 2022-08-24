@@ -20,6 +20,7 @@ npm run dev / pnpm run dev
 npm run init / pnpm run dev // 生成新项目
 ```
 
+
 ## 功能点
 
 本项目是基于**pnpm，vue-cli4.x，webpack5**，对vue-cli提供的框架做的二次封装，主要封装的功能点多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案等等
@@ -64,6 +65,33 @@ npm run init / pnpm run dev // 生成新项目
 <img alt="logo" style='display:flex;text-align:left' src="./image/wx.png" width="400">
 <img alt="logo" style='display:flex;text-align:right' src="./image/gzh.png" width="400">
 </p>
+
+> 使用pnpm需要node版本大14.6
+> 使用npm 如果遇到如下错误，建议加 --legacy-peer-deps
+> 
+```
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR!
+npm ERR! While resolving: vue-template@1.0.0
+npm ERR! Found: eslint-plugin-vue@8.7.1
+npm ERR! node_modules/eslint-plugin-vue
+npm ERR!   dev eslint-plugin-vue@"^8.0.3" from the root project
+npm ERR!
+npm ERR! Could not resolve dependency:
+npm ERR! peer eslint-plugin-vue@"^7.0.0" from @vue/eslint-config-standard@6.1.0
+npm ERR! node_modules/@vue/eslint-config-standard
+npm ERR!   dev @vue/eslint-config-standard@"^6.1.0" from the root project
+npm ERR!
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR!
+npm ERR! See /Users/yinzhuo/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/yinzhuo/.npm/_logs/2022-08-24T13_04_48_302Z-debug-0.log
+```
 
 
 
