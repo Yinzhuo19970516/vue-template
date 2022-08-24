@@ -10,8 +10,8 @@ interface MyAxiosResponse extends AxiosResponse {
   config: MyAxiosRequestConfig
 }
 type TAxiosOption = {
-  baseURL: string
-  timeout: number
+  baseURL: string | undefined
+  timeout: any
   slientError: boolean
   loading: boolean
 }
