@@ -21,23 +21,19 @@ const getData = async () => {
   const data = await getInfoConfig({
     key: 'xiaoying.loanproduct.h5.faceAuthority'
   }).catch(err => {
-    console.log('err', err)
     return Promise.reject(err)
   })
-  console.log(data)
   storeVuex.commit('increment')
   setSessionStorage('key', data)
   piniaStore.main().$patch({
     configInfo: { data: data }
   })
-  console.log(piniaStore.main())
   piniaStore.test().$patch({
     age: 24
   })
   piniaStore.test1().$patch({
     name: 'yinzhuo'
   })
-  console.log(1)
 }
 onMounted(() => {
   // getData()
