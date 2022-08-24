@@ -13,11 +13,11 @@
 <h3>启动项目</h3> 
 
 ```
-npm i
+npm i / pnpm i
 
-npm run dev
+npm run dev / pnpm run dev
 
-npm run init // 生成新项目
+npm run init / pnpm run dev // 生成新项目
 ```
 
 ## 功能点
