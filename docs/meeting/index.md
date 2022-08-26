@@ -57,7 +57,7 @@ function debounce(fn,wait){
 
 节流：每隔一段时间，只执行一次。按照一定频率来执行
 适用场景
-srcoll 事件，每隔一秒计算一次位置信息
+scroll 事件，每隔一秒计算一次位置信息
 浏览器播放事件，每个一秒计算一次进度信息等
 
 ```js
@@ -74,3 +74,70 @@ function throttle(fn,wait){
     }
 }
 ```
+## 4.如何实现一个元素的水平垂直居中
+* flex
+* grid
+* 绝对定位 + transform
+* 绝对定位 + margin负边距
+* 绝对定位 + margin:auto
+* flex + margin:auto
+* text-algin:center line-height = height
+```
+// display
+.a {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+// 绝对定位
+.a {
+    position:absolute;
+    top:50%;
+    bottom:50%;
+    transform: translate(-50%, -50%);
+}
+// grid
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+//在将元素绝对定位为 top: 50%; left: 50%;后，可以使用值为宽的一半和高的一半的负 margin 实现垂直水平居中
+.child {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -50px 0 0 -150px;
+}
+// 绝对定位，加 margin:auto
+.container {
+  position: relative;
+  height: 300px;
+  border: 1px solid red;
+}
+.item {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+// flex 花活 //行内元素与块状元素均可
+.box {
+  display: flex;
+}
+
+.item {
+  margin: auto;
+}
+// 行内元素  text-aligin:center line-height = height
+```
+
