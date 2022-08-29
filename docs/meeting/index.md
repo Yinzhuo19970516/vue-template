@@ -140,4 +140,13 @@ function throttle(fn,wait){
 }
 // 行内元素  text-aligin:center line-height = height
 ```
+## 5.在前端开发中，如何获取浏览器的唯一标识
+不同的系统显卡绘制 canvas 时渲染参数、抗锯齿等算法不同，因此绘制成图片数据的 CRC 也不同
+根据canvas，绘制canvas，获取base64的dataUrl,然后进行md5摘要计算，获取浏览器指纹
+FingerprintJS
+这个库会获取canvas webgl UserAgent AudioContext 对新式 API 的支持程度等数据。
+
+
+
+
 
