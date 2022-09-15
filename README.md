@@ -35,6 +35,7 @@ npm run init / pnpm run dev // 生成新项目
 - [🤘 Pinia状态管理库]
 - [🤏 持久化存储插件封装]
 - [👍 路由动画的封装]
+- [🤝 支持history模式]
 - [🤝 axios 二次封装]
 - [💪 viewport 适配方案]
 - [✌️ less sass变量，函数的处理]  
@@ -47,7 +48,7 @@ npm run init / pnpm run dev // 生成新项目
 
 ### 后期规划
 
--   路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix
+-   ~~路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix~~(9月15日已完成)
 -   统一的格式控制管理，能够适用于webstrom 和 vscode
 -   ~~多入口时选择编译单个入口文件~~ （**已完成**）
 -   整个项目cli化，可以像vue-cli那样，直接一行命令下载下来
