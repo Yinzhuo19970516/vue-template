@@ -47,6 +47,7 @@ export default {
             { text: '数据持久化',link:'/page/piniaPlugin'},
             { text: 'axios二次封装',link:'/page/axios'},
             { text: '路由跳转动画',link:'/page/router'},
+            { text: '接入nprogess',link:'/page/nprogess'},
             { text: '多入口支持history路由模式',link:'/page/history'},
             { text: 'less sass的优化处理',link:'/page/less'},
             { text: 'viewport适配方案',link:'/page/viewport'},
