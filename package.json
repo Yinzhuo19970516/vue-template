@@ -10,7 +10,8 @@
     "build:prod": "vue-cli-service build --mode online",
     "build:test": "vue-cli-service build --mode test",
     "dev": "vue-cli-service serve",
-    "init": "node ./src/common/initTemplate/index.js"
+    "init": "node ./src/common/initTemplate/index.js",
+    "analyze": "use_analyzer=true npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -60,7 +61,8 @@
     "typescript": "~4.5.5",
     "vconsole-webpack-plugin": "^1.7.3",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
-    "webpack": "^5.0.0"
+    "webpack": "^5.0.0",
+    "webpack-bundle-analyzer": "^4.6.1"
   },
   "eslintConfig": {
     "root": true,

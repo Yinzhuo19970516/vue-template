@@ -3,6 +3,8 @@ const { merge } = require('webpack-merge')
 const { defineConfig } = require('@vue/cli-service')
 const glob = require('glob') // 用于筛选文件
 const path = require('path')
+// vue.config.js
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const entryName = process.env.npm_config_page
 const entry1 = glob.sync('src/main.js') // 单入口
@@ -36,6 +38,9 @@ module.exports = defineConfig({
     process.env.NODE_ENV === 'development',
   parallel: false,
   chainWebpack: config => {
+    if (process.env.use_analyzer){
+      config.plugin('webpack-bundle-analyzer').use(BundleAnalyzerPlugin)
+    }
     // ts-import-plugin 配置参考链接：https://zhuanlan.zhihu.com/p/168562845
     const tsRule = config.module.rule('ts')
     tsRule.exclude.add(/node_modules/)

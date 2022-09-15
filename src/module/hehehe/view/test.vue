@@ -1,10 +1,10 @@
 <template>
-  <h1>hehehe/index</h1>
+  <h1>hehehe/test</h1>
 </template>
 
 <script>
 export default {
-  name: 'index-vue'
+  name: 'test-vue'
 }
 </script>
 
