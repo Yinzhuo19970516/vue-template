@@ -11,30 +11,30 @@
 <script setup>
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { start, close } from '@/common/utils/nprogress'
+// import { start, close } from '@/common/utils/nprogress'
 
 const router = useRouter()
 const state = reactive({
   transitionName: 'slide-left'
 })
 
-router.beforeEach((to, from) => {
-  start()
-})
-
-router.afterEach(to => {
-  close()
-})
 // router.beforeEach((to, from) => {
-//   if (to.meta.level > from.meta.level) {
-//     state.transitionName = 'slide-left'// 向左滑动
-//   } else if (to.meta.level < from.meta.level) {
-//     // 由次级到主级
-//     state.transitionName = 'slide-right'// 向右滑动
-//   } else {
-//     state.transitionName = ''// 同级无过渡效果
-//   }
+//   start()
 // })
+//
+// router.afterEach(to => {
+//   close()
+// })
+router.beforeEach((to, from) => {
+  if (to.meta.level > from.meta.level) {
+    state.transitionName = 'slide-left'// 向左滑动
+  } else if (to.meta.level < from.meta.level) {
+    // 由次级到主级
+    state.transitionName = 'slide-right'// 向右滑动
+  } else {
+    state.transitionName = ''// 同级无过渡效果
+  }
+})
 
 </script>
 <style>
