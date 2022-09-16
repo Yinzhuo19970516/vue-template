@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import {createStore}from 'vuex'
 
 export const store = createStore({
   state: {
@@ -6,7 +6,7 @@ export const store = createStore({
   },
   getters: {},
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
     }
   },

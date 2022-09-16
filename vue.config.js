@@ -34,11 +34,10 @@ module.exports = defineConfig({
   publicPath: process.env.VUE_APP_PUBLIC_PATH,
   transpileDependencies: true,
   productionSourceMap:
-    process.env.VUE_APP_ONLINE_ENV === 'false' ||
-    process.env.NODE_ENV === 'development',
+    process.env.VUE_APP_ONLINE_ENV === 'false' || process.env.NODE_ENV === 'development',
   parallel: false,
   chainWebpack: config => {
-    if (process.env.use_analyzer){
+    if (process.env.use_analyzer) {
       config.plugin('webpack-bundle-analyzer').use(BundleAnalyzerPlugin)
     }
     // ts-import-plugin 配置参考链接：https://zhuanlan.zhihu.com/p/168562845
@@ -69,8 +68,7 @@ module.exports = defineConfig({
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'less',
-      patterns: [
-        path.resolve(__dirname, './src/common/style/base.less')]
+      patterns: [path.resolve(__dirname, './src/common/style/base.less')]
     }
   },
   css: {

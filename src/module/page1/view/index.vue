@@ -46,23 +46,23 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  h2{
-    color: @textColor;
-  }
+h2 {
+  color: @textColor;
+}
 </style>
 <style lang="scss" scoped>
-  h2 {
-    color: $textColor;
-  }
+h2 {
+  color: $textColor;
+}
 </style>
 <style scoped>
-.container{
-  background:rgb(211, 124, 165);
+.container {
+  background: rgb(211, 124, 165);
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
-.cell-group{
+.cell-group {
 }
 </style>

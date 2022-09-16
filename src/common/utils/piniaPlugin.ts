@@ -1,5 +1,10 @@
 import { toRaw } from 'vue'
-import { getLocalStorage, getSessionStorage, setLocalStorage, setSessionStorage } from '@/common/utils/storage'
+import {
+  getLocalStorage,
+  getSessionStorage,
+  setLocalStorage,
+  setSessionStorage
+} from '@/common/utils/storage'
 import { PiniaPluginContext } from 'pinia'
 
 interface StoreList {
@@ -9,7 +14,7 @@ interface StoreList {
 }
 
 interface AnyObj {
-  [propName: string]: any;
+  [propName: string]: any
 }
 
 interface Options {
@@ -32,7 +37,7 @@ const plugin = (options: Options): any => {
   const { key, storeList } = options
   return (context: PiniaPluginContext) => {
     const { store } = context
-    let storageType:any
+    let storageType: any
     let obj: any = {}
     for (const item of storeList) {
       if (item.storeName.includes(store.$id)) {
@@ -46,7 +51,7 @@ const plugin = (options: Options): any => {
         if (path && path.length > 0) {
           // 如果存在path 则需要判断
           if (storeName.length === 1) {
-            path.forEach((item) => {
+            path.forEach(item => {
               obj[item] = store.$state[item]
             })
           } else {
@@ -55,9 +60,9 @@ const plugin = (options: Options): any => {
         }
         obj = path && path.length > 0 ? obj : store.$state
         storeName.includes(store.$id) &&
-        store.$subscribe(() => {
-          setStorageTypeMap[storageType](`${key ?? 'pinia'}-${store.$id}`, toRaw(obj))
-        })
+          store.$subscribe(() => {
+            setStorageTypeMap[storageType](`${key ?? 'pinia'}-${store.$id}`, toRaw(obj))
+          })
       }
     }
   }

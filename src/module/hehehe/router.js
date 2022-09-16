@@ -29,7 +29,7 @@ const router = createRouter({
   routes
 })
 
-router.afterEach(async (to) => {
+router.afterEach(async to => {
   // 重置页面title
   const title = to.meta && to.meta.title
   document.title = title || '坤元资讯'

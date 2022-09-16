@@ -28,30 +28,33 @@ const cancelLoading = () => {
   if (requestNum === 0) hideLoading()
 }
 
-const config:TAxiosOption = {
+const config: TAxiosOption = {
   baseURL: process.env.VUE_APP_ACTIVITY_SERVER_TARGET,
   timeout: process.env.VUE_APP_API_TIMEOUT,
   slientError: false,
   loading: true
 }
 class Request {
-  instance:AxiosInstance
+  instance: AxiosInstance
   constructor(config: TAxiosOption) {
     this.instance = axios.create(config)
-    this.instance.interceptors.request.use((requestConfig: MyAxiosRequestConfig) => {
-      // 这里处理ajaxState
-      // 这里处理PHP接口逻辑
-      console.log('requestConfig', requestConfig, config)
-      const { loading = true } = requestConfig
-      if (loading) addLoading()
-      if (requestConfig.headers?.['Content-Type'] === 'application/x-www-form-urlencoded') {
-        requestConfig.data = qs.stringify(requestConfig.data)
+    this.instance.interceptors.request.use(
+      (requestConfig: MyAxiosRequestConfig) => {
+        // 这里处理ajaxState
+        // 这里处理PHP接口逻辑
+        console.log('requestConfig', requestConfig, config)
+        const { loading = true } = requestConfig
+        if (loading) addLoading()
+        if (requestConfig.headers?.['Content-Type'] === 'application/x-www-form-urlencoded') {
+          requestConfig.data = qs.stringify(requestConfig.data)
+        }
+        return requestConfig
+      },
+      (error: any) => {
+        console.log('requestError', error)
+        return Promise.reject(error)
       }
-      return requestConfig
-    }, (error: any) => {
-      console.log('requestError', error)
-      return Promise.reject(error)
-    })
+    )
     this.instance.interceptors.response.use(
       (responseData: MyAxiosResponse) => {
         const status = responseData.status
@@ -72,7 +75,7 @@ class Request {
           return Promise.reject(res)
         }
       },
-      (error:any) => {
+      (error: any) => {
         const { loading = true } = error.config
         if (loading) cancelLoading()
         let errMsg

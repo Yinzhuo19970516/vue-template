@@ -2,7 +2,7 @@
   <router-view v-slot="{ Component }">
     <transition :name="state.transitionName">
       <keep-alive>
-        <component :is="Component"/>
+        <component :is="Component" />
       </keep-alive>
     </transition>
   </router-view>
@@ -27,15 +27,14 @@ const state = reactive({
 // })
 router.beforeEach((to, from) => {
   if (to.meta.level > from.meta.level) {
-    state.transitionName = 'slide-left'// 向左滑动
+    state.transitionName = 'slide-left' // 向左滑动
   } else if (to.meta.level < from.meta.level) {
     // 由次级到主级
-    state.transitionName = 'slide-right'// 向右滑动
+    state.transitionName = 'slide-right' // 向右滑动
   } else {
-    state.transitionName = ''// 同级无过渡效果
+    state.transitionName = '' // 同级无过渡效果
   }
 })
-
 </script>
 <style>
 /*@import '@/common/style/pageTransAnimate.css';*/

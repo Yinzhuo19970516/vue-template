@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>测试页面 test </h2>
+    <h2>测试页面 test</h2>
     <button @click="router.push('index')">跳转首页</button>
   </div>
 </template>
@@ -17,8 +17,8 @@ export default {
 </script>
 
 <style scoped>
-.container{
-  background:rgb(85, 225, 153);
+.container {
+  background: rgb(85, 225, 153);
   display: flex;
   flex-direction: column;
   align-items: center;

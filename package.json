@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --mode test",
-    "lint": "vue-cli-service lint",
     "build:online": "vue-cli-service build --mode online",
-    "build:prod": "vue-cli-service build --mode online",
     "build:test": "vue-cli-service build --mode test",
-    "dev": "vue-cli-service serve",
     "init": "node ./src/common/initTemplate/index.js",
-    "analyze": "use_analyzer=true npm run build"
+    "analyze": "use_analyzer=true npm run build",
+    "lint": "vue-cli-service lint --fix --ext .js,.ts,.tsx,.vue,./src --quiet",
+    "format": "prettier .  --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -24,6 +25,8 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@babel/core": "^7.12.16",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
     "@babel/plugin-proposal-optional-chaining": "^7.18.6",
@@ -41,13 +44,17 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
     "axios": "^0.26.1",
     "babel-plugin-import": "^1.13.5",
-    "eslint": "^7.32.0",
+    "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
     "inquirer": "^8.2.4",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
@@ -63,32 +70,6 @@
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "webpack": "^5.0.0",
     "webpack-bundle-analyzer": "^4.6.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true,
-      "vue/setup-compiler-macros": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "@vue/standard",
-      "@vue/typescript/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {
-      "no-tabs": "off",
-      "indent": "off",
-      "space-before-function-paren": "off",
-      "camelcase": "off",
-      "no-mixed-spaces-and-tabs": "off",
-      "@typescript-eslint/no-this-alias": "off",
-      "@typescript-eslint/no-explicit-any": [
-        "off"
-      ]
-    }
   },
   "browserslist": [
     "> 1%",

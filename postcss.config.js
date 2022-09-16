@@ -1,7 +1,7 @@
 // postcss.config.js
-const path = require('path')
+// const path = require('path')
 
-module.exports = ({ file }) => {
+module.exports = () => {
   // const designWidth = file.includes(path.join('node_modules', 'vant')) ? 375 : 750
   return {
     plugins: {
