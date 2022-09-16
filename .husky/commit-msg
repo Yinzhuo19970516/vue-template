@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
+echo('312312')
 npx --no-install commitlint --edit $1
 
