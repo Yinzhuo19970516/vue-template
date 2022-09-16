@@ -35,18 +35,19 @@ npm run init // 生成新项目
 - [✌️ less sass变量，函数的处理](/page/less.html)
 - [☝️ 配置多环境变量](/page/env.html)
 - [👏 兼容性处理方案](/page/babel.html)
+- [👏 Eslint + prettier + husky + commitlint 规范化处理](/page/eslint.html)
 
 
 
 <h3>后期规划</h3>
 
--   路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix
--   统一的格式控制管理，能够适用于webstrom 和 vscode
+-   ~~路由配置history，目前使用history 无法访问二级页面，等待后期研究ngnix~~(**9月16日已完成**)
+-   ~~统一的格式控制管理，能够适用于webstrom 和 vscode~~
 -   ~~多入口时选择编译单个入口文件~~ （**已完成**）
 -   整个项目cli化，可以像vue-cli那样，直接一行命令下载下来
 -   增量编译，随着项目变大，每次发布把所有项目都打包一遍是不现实的，能否有一个方案只编译有修改部分，这样编译效率大大提高
--   common 基础方法库 打包封装
--   使用vite搭建组件库componet
+-   ~~common 基础方法库 打包封装~~（**与大佬沟通后，意义不大，暂时放弃**）
+-   使用vite搭建组件库component
 
 <p align="center">如果对你有帮助，可以送我一颗珍贵的小星星（づ￣3￣）づ╭❤～</p>
 <p align="center">如果有任何疑问，可直接微信联系我，秒回。</p>

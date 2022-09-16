@@ -53,6 +53,7 @@ export default {
             { text: 'viewport适配方案',link:'/page/viewport'},
             { text: '环境变量',link:'/page/env'},
             { text: '兼容性处理方案',link:'/page/babel'},
+            { text: '规范化处理',link:'/page/eslint'},
             { text: '总结', link: '/page/all' },
           ]
         }
