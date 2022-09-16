@@ -72,6 +72,9 @@
     "webpack": "^5.0.0",
     "webpack-bundle-analyzer": "^4.6.1"
   },
+  "lint-staged": {
+    "*.{ts,vue,js,css,html}": ["eslint --fix", "prettier --write","git add ."]
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
