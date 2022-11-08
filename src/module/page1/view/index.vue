@@ -3,6 +3,7 @@
     <h2>首页 index</h2>
     <button @click="router.push('test')" class="center">跳转测试页面</button>
     <button @click="getData" style="margin-top: 20px">接口调用</button>
+    <button @click="getData2" style="margin-top: 20px">测试取消重复请求</button>
     <Cell title="单元格" value="内容" label="描述信息" />
   </div>
 </template>
@@ -34,6 +35,27 @@ const getData = async () => {
   piniaStore.test1().$patch({
     name: 'yinzhuo'
   })
+}
+const getData2 = async () => {
+  await getInfoConfig({
+    key: 'xiaoying.loanproduct.h5.faceAuthority'
+  })
+  await getInfoConfig({
+    key: 'xiaoying.loanproduct.h5.faceAuthority'
+  })
+  await getInfoConfig({
+    key: 'xiaoying.loanproduct.h5.faceAuthority'
+  })
+  // setTimeout(async () => {
+  //   await getInfoConfig({
+  //     key: 'xiaoying.loanproduct.h5.faceAuthority'
+  //   })
+  // }, 500)
+  // setTimeout(async () => {
+  //   await getInfoConfig({
+  //     key: 'xiaoying.loanproduct.h5.faceAuthority'
+  //   })
+  // }, 1000)
 }
 onMounted(() => {
   // getData()

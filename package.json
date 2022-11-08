@@ -12,7 +12,8 @@
     "analyze": "use_analyzer=true npm run build",
     "lint": "vue-cli-service lint --fix --ext .js,.ts,.tsx,.vue,./src --quiet",
     "format": "prettier .  --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "report": "vue-cli-service build --report-json"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -73,7 +74,10 @@
     "webpack-bundle-analyzer": "^4.6.1"
   },
   "lint-staged": {
-    "*.{ts,vue,js,css,html}": ["eslint --fix", "prettier --write"]
+    "*.{ts,vue,js,css,html}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "browserslist": [
     "> 1%",
