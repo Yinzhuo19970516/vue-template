@@ -3,6 +3,10 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 
 const routes = [
   {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
+  },
+  {
     path: '/',
     name: 'home',
     component: () => import('./view/index.vue'),
@@ -19,15 +23,11 @@ const routes = [
       title: '测试页面',
       level: 'a2'
     }
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
   }
 ]
 
 const router = createRouter({
-  // history: createWebHashHistory(),
+  // history: createWebHistory(),
   history: createWebHistory('/page1/'),
   routes
 })

@@ -3,7 +3,7 @@ import request from '@/common/axios/request'
 export function getInfoConfig(params) {
   return request.get('/h5/common/get_info_config', params, {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    isCancelRequest: false,
+    isCancelRequest: true,
     loading: true,
     isThrowError: false
   })

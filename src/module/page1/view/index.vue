@@ -40,22 +40,16 @@ const getData2 = async () => {
   await getInfoConfig({
     key: 'xiaoying.loanproduct.h5.faceAuthority'
   })
-  await getInfoConfig({
-    key: 'xiaoying.loanproduct.h5.faceAuthority'
-  })
-  await getInfoConfig({
-    key: 'xiaoying.loanproduct.h5.faceAuthority'
-  })
-  // setTimeout(async () => {
-  //   await getInfoConfig({
-  //     key: 'xiaoying.loanproduct.h5.faceAuthority'
-  //   })
-  // }, 500)
-  // setTimeout(async () => {
-  //   await getInfoConfig({
-  //     key: 'xiaoying.loanproduct.h5.faceAuthority'
-  //   })
-  // }, 1000)
+  setTimeout(async () => {
+    await getInfoConfig({
+      key: 'xiaoying.loanproduct.h5.faceAuthority'
+    })
+  }, 500)
+  setTimeout(async () => {
+    await getInfoConfig({
+      key: 'xiaoying.loanproduct.h5.faceAuthority'
+    })
+  }, 1000)
 }
 onMounted(() => {
   // getData()

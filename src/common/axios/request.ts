@@ -90,7 +90,7 @@ const config: TAxiosOption = {
   loading: true,
   isCancelRequest: false
 }
-let customConfig = {}
+
 class Request {
   instance: AxiosInstance
   constructor(config: TAxiosOption) {
@@ -99,12 +99,11 @@ class Request {
       (requestConfig: MyAxiosRequestConfig) => {
         // 这里处理ajaxState
         // 这里处理PHP接口逻辑
-        if (requestConfig.isCancelRequest) {
+        const { loading, isCancelRequest } = requestConfig
+        if (isCancelRequest) {
           removePending(requestConfig)
           addPending(requestConfig)
         }
-        customConfig = requestConfig
-        const { loading = true } = requestConfig
         if (loading) addLoading()
         if (requestConfig.headers?.['Content-Type'] === 'application/x-www-form-urlencoded') {
           requestConfig.data = qs.stringify(requestConfig.data)
@@ -122,7 +121,7 @@ class Request {
         const res = responseData.data
         const { data, errcode } = res
         const { loading = true, isCancelRequest } = responseData.config
-        if (isCancelRequest) removePending(customConfig)
+        if (isCancelRequest) removePending(responseData.config)
         if (loading) cancelLoading()
         // 如果调用其他中台，此处需要单独对code做转化
         if (status === 200 && 0 === errcode) {
@@ -139,8 +138,9 @@ class Request {
       },
       (error: any) => {
         if (!error.config) return Promise.reject(error)
-        error.config && removePending(customConfig)
-        error.config && error.config.loading && cancelLoading()
+        const { loading, isCancelRequest } = error.config
+        isCancelRequest && removePending(error.config)
+        loading && cancelLoading()
         let errMsg
         if (error && error.response) {
           if (error.response.status >= 500 && error.response.status <= 599) {
