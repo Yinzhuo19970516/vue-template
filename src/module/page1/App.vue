@@ -38,4 +38,7 @@ router.beforeEach((to, from) => {
 </script>
 <style>
 /*@import '@/common/style/pageTransAnimate.css';*/
+#app {
+  /** 用于被 postcss-mobile-forever 识别，在桌面端和横屏居中展示页面 */
+}
 </style>
