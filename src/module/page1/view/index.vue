@@ -5,6 +5,8 @@
     <button @click="getData" style="margin-top: 20px">接口调用</button>
     <button @click="getData2" style="margin-top: 20px">测试取消重复请求</button>
     <Cell title="单元格" value="内容" label="描述信息" />
+    <button @click="router.push('colorList')" style="margin-top: 130px">高级色</button>
+    <button @click="router.push('colorList1')" style="margin-top: 20px">撞色</button>
   </div>
 </template>
 

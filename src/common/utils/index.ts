@@ -139,3 +139,24 @@ export function parse(value: any) {
   }
   return re
 }
+
+export function copy(copyValue: string) {
+  //创建一个新组件
+  const oInput = document.createElement('input')
+  //给新组件赋值
+  oInput.value = copyValue
+  //添加新节点到页面body中
+  document.body.appendChild(oInput)
+  //选择对象
+  oInput.select()
+  //对选择对象的值进行复制到浏览器中
+  document.execCommand('Copy')
+  Toast({
+    message: '复制成功',
+    forbidClick: true,
+    type: 'success',
+    duration: 500
+  })
+  //删除新节点(重置操作)
+  document.body.removeChild(oInput)
+}

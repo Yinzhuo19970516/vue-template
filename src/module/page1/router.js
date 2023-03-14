@@ -23,6 +23,22 @@ const routes = [
       title: '测试页面',
       level: 'a2'
     }
+  },
+  {
+    path: '/colorList',
+    name: 'colorList',
+    component: () => import('./view/colorList.vue'),
+    meta: {
+      title: '高级色列表'
+    }
+  },
+  {
+    path: '/colorList1',
+    name: 'colorList1',
+    component: () => import('./view/colorList1.vue'),
+    meta: {
+      title: '撞色列表'
+    }
   }
 ]
 
