@@ -17,7 +17,7 @@ const router = useRouter()
 const state = reactive({
   transitionName: 'slide-left'
 })
-
+// 页面跳转过度动画，两种方式，请自选
 // router.beforeEach((to, from) => {
 //   start()
 // })
@@ -37,5 +37,5 @@ router.beforeEach((to, from) => {
 })
 </script>
 <style>
-/*@import '@/common/style/pageTransAnimate.css';*/
+@import '@/common/style/pageTransAnimate.css';
 </style>

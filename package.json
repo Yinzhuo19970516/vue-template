@@ -75,8 +75,8 @@
   },
   "lint-staged": {
     "*.{ts,vue,js,css,html}": [
-      "eslint --fix",
-      "prettier --write"
+      "npm run lint",
+      "npm run format"
     ]
   },
   "browserslist": [
