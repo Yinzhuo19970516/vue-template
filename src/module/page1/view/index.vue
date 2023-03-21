@@ -2,12 +2,20 @@
   <div class="container">
     <h2>首页 index</h2>
     <Cell title="单元格" value="内容" label="描述信息" />
-    <Button type="primary" @click="router.push('test')" class="btn">跳转测试页面</Button>
+    <Button type="primary" @click="router.push('test')" class="btn"
+      >跳转测试页面</Button
+    >
     <Button type="primary" @click="getData" class="btn">测试接口调用</Button>
-    <Button type="primary" @click="getData2" class="btn">测试取消重复请求</Button>
+    <Button type="primary" @click="getData2" class="btn"
+      >测试取消重复请求</Button
+    >
     <div class="btn-box">
-      <Button round type="success" @click="router.push('colorList')">高级色页面</Button>
-      <Button round type="success" @click="router.push('colorList1')">撞色页面</Button>
+      <Button round type="success" @click="router.push('colorList')"
+        >高级色页面</Button
+      >
+      <Button round type="success" @click="router.push('colorList1')"
+        >撞色页面</Button
+      >
     </div>
   </div>
 </template>
@@ -26,7 +34,7 @@ const getData = async () => {
   // axios封装之后，请求接口获取数据标准写法
   const data = await getInfoConfig({
     key: 'xiaoying.loanproduct.h5.faceAuthority'
-  }).catch(err => {
+  }).catch((err) => {
     return Promise.reject(err)
   })
   // 获取数据之后，进一步存储

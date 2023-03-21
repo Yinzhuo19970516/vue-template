@@ -14,7 +14,9 @@
           :class="$style['list-box-data-item']"
           :style="{ background: item.data[key === 0 ? 1 : 0].value }"
         ></div>
-        <p class="text" :style="{ color: item.data[key === 0 ? 1 : 0].value }">{{ obj.name }}</p>
+        <p class="text" :style="{ color: item.data[key === 0 ? 1 : 0].value }">
+          {{ obj.name }}
+        </p>
       </div>
     </div>
   </div>
@@ -24,7 +26,7 @@
 import { reactive } from 'vue'
 import { copy } from '@/common/utils'
 
-const copyText = str => {
+const copyText = (str) => {
   copy(str)
 }
 const list = reactive([

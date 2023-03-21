@@ -36,18 +36,18 @@
       />
     </div>
     <script>
-      var WEB_ENV = '<%= VUE_APP_ONLINE_ENV %>'
+      var WEB_ENV = "<%= VUE_APP_ONLINE_ENV %>";
       // 根据环境变量引入VConsole(判断非生产环境)
       if (!JSON.parse(WEB_ENV)) {
-        var scriptEl = document.createElement('script')
+        var scriptEl = document.createElement("script");
         // vconsole.js静态资源放在测试机器10.150.27.124上，目录地址：/data/frontendStatics
         // scriptEl.src = 'https://h5huicai.hengyirong.com/frontendStatics/vconsole.js'
-        scriptEl.src = '<%= BASE_URL %>vConsole.js'
-        scriptEl.async = true
-        document.head.appendChild(scriptEl)
+        scriptEl.src = "<%= BASE_URL %>vConsole.js";
+        scriptEl.async = true;
+        document.head.appendChild(scriptEl);
         scriptEl.onload = function () {
-          window.vConsole = new VConsole()
-        }
+          window.vConsole = new VConsole();
+        };
       }
     </script>
   </body>

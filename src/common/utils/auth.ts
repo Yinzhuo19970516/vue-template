@@ -3,7 +3,9 @@ const TokenKey = 'x-access-token'
 const UserTypeKey = 'x-user-type'
 
 export function getToken(): string {
-  return CoreCookie.get(TokenKey) === null ? '' : (CoreCookie.get(TokenKey) as string)
+  return CoreCookie.get(TokenKey) === null
+    ? ''
+    : (CoreCookie.get(TokenKey) as string)
 }
 
 export function setToken(token: string): void {
@@ -15,7 +17,9 @@ export function setUserType(token: string | number): void {
 }
 
 export function getUserType(): string {
-  return CoreCookie.get(UserTypeKey) === null ? '' : (CoreCookie.get(UserTypeKey) as string)
+  return CoreCookie.get(UserTypeKey) === null
+    ? ''
+    : (CoreCookie.get(UserTypeKey) as string)
 }
 
 export function removeToken(): void {

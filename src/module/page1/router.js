@@ -1,5 +1,9 @@
 // eslint-disable-next-line
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory
+} from 'vue-router'
 
 const routes = [
   {
@@ -48,7 +52,7 @@ const router = createRouter({
   routes
 })
 
-router.afterEach(async to => {
+router.afterEach(async (to) => {
   // 重置页面title
   const title = to.meta && to.meta.title
   document.title = title || '坤元资讯'

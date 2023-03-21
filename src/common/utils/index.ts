@@ -1,87 +1,87 @@
-import { Toast } from "vant";
+import { Toast } from 'vant'
 // import 'vant/es/toast/style'
 
-export const SUCCESS_CODE = "000000";
-export const ACTIVITY_NO = "29571682bd3040bd800a4031c7fc9987";
-export const PHP_SUCCESS_CODE = "200";
+export const SUCCESS_CODE = '000000'
+export const ACTIVITY_NO = '29571682bd3040bd800a4031c7fc9987'
+export const PHP_SUCCESS_CODE = '200'
 
 export function showLoading() {
   Toast({
-    message: "loading",
+    message: 'loading',
     forbidClick: true,
-    type: "loading",
-  });
+    type: 'loading'
+  })
 }
 export function hideLoading() {
-  Toast.clear();
+  Toast.clear()
 }
 
 export function showErrorInfo(msg: string) {
-  Toast(msg && msg.toString());
+  Toast(msg && msg.toString())
 }
 
-export function formatTimeStr(date: any, fmt = "yyyy-mm-dd") {
-  if (date == null || date === "" || date === undefined) return null;
-  let ret, newDate;
+export function formatTimeStr(date: any, fmt = 'yyyy-mm-dd') {
+  if (date == null || date === '' || date === undefined) return null
+  let ret, newDate
   try {
     // 解决ios手机时间格式化NAN问题
-    if (typeof date === "string" && date.indexOf("-") !== -1) {
-      date = date.replace(/-/g, "/");
+    if (typeof date === 'string' && date.indexOf('-') !== -1) {
+      date = date.replace(/-/g, '/')
     }
-    newDate = new Date(date);
+    newDate = new Date(date)
   } catch (e) {
-    newDate = date;
+    newDate = date
   }
   const opt: any = {
-    "Y+": newDate.getFullYear().toString(), // 年
-    "m+": (newDate.getMonth() + 1).toString(), // 月
-    "d+": newDate.getDate().toString(), // 日
-    "H+": newDate.getHours().toString(), // 时
-    "M+": newDate.getMinutes().toString(), // 分
-    "S+": newDate.getSeconds().toString(), // 秒
+    'Y+': newDate.getFullYear().toString(), // 年
+    'm+': (newDate.getMonth() + 1).toString(), // 月
+    'd+': newDate.getDate().toString(), // 日
+    'H+': newDate.getHours().toString(), // 时
+    'M+': newDate.getMinutes().toString(), // 分
+    'S+': newDate.getSeconds().toString() // 秒
     // 有其他格式化字符需求可以继续添加，必须转化成字符串
-  };
+  }
   for (const k in opt) {
-    ret = new RegExp("(" + k + ")").exec(fmt);
+    ret = new RegExp('(' + k + ')').exec(fmt)
     if (ret) {
       fmt = fmt.replace(
         ret[1],
-        ret[1].length === 1 ? opt[k] : opt[k].padStart(ret[1].length, "0")
-      );
+        ret[1].length === 1 ? opt[k] : opt[k].padStart(ret[1].length, '0')
+      )
     }
   }
-  return fmt;
+  return fmt
 }
 /**
  * 双位数字 小于10补0
  */
 export function twodigit(val: number): string {
-  return `0${val}`.slice(-2);
+  return `0${val}`.slice(-2)
 }
 
 /**
  * 日期格式化
  */
 export function dateFormats(date: number | string, format: string): string {
-  let date1: any = date || new Date();
+  let date1: any = date || new Date()
   if (date1.toString().length === 10) {
-    date1 *= 1000;
+    date1 *= 1000
   }
-  const data2 = new Date(date1);
-  let str = format || "yyyy-MM-dd HH:mm:ss";
-  str = str.replace(/yyyy|YYYY/, data2.getFullYear().toString());
-  str = str.replace(/yy|YY/, data2.getFullYear().toString().slice(-2));
-  str = str.replace(/MM/, twodigit(data2.getMonth() + 1));
-  str = str.replace(/M/g, (data2.getMonth() + 1).toString());
-  str = str.replace(/dd|DD/, twodigit(data2.getDate()));
-  str = str.replace(/d|D/g, data2.getDate().toString());
-  str = str.replace(/hh|HH/, twodigit(data2.getHours()));
-  str = str.replace(/h|H/g, data2.getHours().toString());
-  str = str.replace(/mm/, twodigit(data2.getMinutes()));
-  str = str.replace(/m/g, data2.getMinutes().toString());
-  str = str.replace(/ss|SS/, twodigit(data2.getSeconds()));
-  str = str.replace(/s|S/g, data2.getSeconds().toString());
-  return str;
+  const data2 = new Date(date1)
+  let str = format || 'yyyy-MM-dd HH:mm:ss'
+  str = str.replace(/yyyy|YYYY/, data2.getFullYear().toString())
+  str = str.replace(/yy|YY/, data2.getFullYear().toString().slice(-2))
+  str = str.replace(/MM/, twodigit(data2.getMonth() + 1))
+  str = str.replace(/M/g, (data2.getMonth() + 1).toString())
+  str = str.replace(/dd|DD/, twodigit(data2.getDate()))
+  str = str.replace(/d|D/g, data2.getDate().toString())
+  str = str.replace(/hh|HH/, twodigit(data2.getHours()))
+  str = str.replace(/h|H/g, data2.getHours().toString())
+  str = str.replace(/mm/, twodigit(data2.getMinutes()))
+  str = str.replace(/m/g, data2.getMinutes().toString())
+  str = str.replace(/ss|SS/, twodigit(data2.getSeconds()))
+  str = str.replace(/s|S/g, data2.getSeconds().toString())
+  return str
 }
 
 export const regexpCommon = {
@@ -103,63 +103,63 @@ export const regexpCommon = {
   emoticonPicture:
     // eslint-disable-next-line
     /[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF][\u200D|\uFE0F]|[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF]|[0-9|*|#]\uFE0F\u20E3|[0-9|#]\u20E3|[\u203C-\u3299]\uFE0F\u200D|[\u203C-\u3299]\uFE0F|[\u2122-\u2B55]|\u303D|[\A9|\AE]\u3030|\uA9|\uAE|\u3030|\s/gi,
-};
+}
 
 export function getQueryString(name: string): string {
-  const reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-  const r = window.location.search.substr(1).match(reg);
+  const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+  const r = window.location.search.substr(1).match(reg)
   if (r != null) {
-    return decodeURIComponent(r[2]);
+    return decodeURIComponent(r[2])
   }
-  return "";
+  return ''
 }
 
 function realType(i: any) {
-  return Object.prototype.toString.call(i).slice(8, -1).toLowerCase();
+  return Object.prototype.toString.call(i).slice(8, -1).toLowerCase()
 }
 
 export function addUrlQuery(url: string, query: any) {
-  if (realType(query) === "object") {
-    let str = "";
+  if (realType(query) === 'object') {
+    let str = ''
     for (const key in query) {
-      str += `${key}=${query[key]}&`;
+      str += `${key}=${query[key]}&`
     }
-    query = str.slice(0, -1);
+    query = str.slice(0, -1)
   }
-  if (/\?/.test(url.split("#")[0])) {
-    return url.replace(/\?/, "$&" + query + "&");
+  if (/\?/.test(url.split('#')[0])) {
+    return url.replace(/\?/, '$&' + query + '&')
   } else {
-    return url.replace(/#|$/, "?" + query + "$&");
+    return url.replace(/#|$/, '?' + query + '$&')
   }
 }
 
 export function parse(value: any) {
-  let re = "";
+  let re = ''
   try {
-    re = JSON.parse(value);
+    re = JSON.parse(value)
   } catch (err) {
-    return value;
+    return value
   }
-  return re;
+  return re
 }
 
 export function copy(copyValue: string) {
   // 创建一个新组件
-  const oInput = document.createElement("input");
+  const oInput = document.createElement('input')
   // 给新组件赋值
-  oInput.value = copyValue;
+  oInput.value = copyValue
   // 添加新节点到页面body中
-  document.body.appendChild(oInput);
+  document.body.appendChild(oInput)
   // 选择对象
-  oInput.select();
+  oInput.select()
   // 对选择对象的值进行复制到浏览器中
-  document.execCommand("Copy");
+  document.execCommand('Copy')
   Toast({
-    message: "复制成功",
+    message: '复制成功',
     forbidClick: true,
-    type: "success",
-    duration: 500,
-  });
+    type: 'success',
+    duration: 500
+  })
   // 删除新节点(重置操作)
-  document.body.removeChild(oInput);
+  document.body.removeChild(oInput)
 }

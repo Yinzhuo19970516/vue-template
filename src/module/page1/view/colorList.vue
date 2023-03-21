@@ -21,7 +21,7 @@ import { reactive } from 'vue'
 import { copy } from '@/common/utils'
 import { setRgbTo16 } from '@/common/utils/tool'
 
-const copyText = str => {
+const copyText = (str) => {
   copy(setRgbTo16(str))
 }
 const list = reactive([

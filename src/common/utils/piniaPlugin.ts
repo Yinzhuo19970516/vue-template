@@ -8,18 +8,18 @@ import {
 import { PiniaPluginContext } from 'pinia'
 
 interface StoreList {
-  storeName: Array<any>
-  storageType?: 'sessionStorage' | 'localStorage' | ''
-  path?: Array<any>
+  storeName: Array<any>;
+  storageType?: 'sessionStorage' | 'localStorage' | '';
+  path?: Array<any>;
 }
 
 interface AnyObj {
-  [propName: string]: any
+  [propName: string]: any;
 }
 
 interface Options {
-  key: string
-  storeList: Array<StoreList>
+  key: string;
+  storeList: Array<StoreList>;
 }
 
 const getStorageTypeMap: AnyObj = {
@@ -43,7 +43,9 @@ const plugin = (options: Options): any => {
       if (item.storeName.includes(store.$id)) {
         const { storeName, path } = item
         storageType = item.storageType
-        const data = getStorageTypeMap[storageType](`${key ?? 'pinia'}-${store.$id}`)
+        const data = getStorageTypeMap[storageType](
+          `${key ?? 'pinia'}-${store.$id}`
+        )
         if (data) {
           console.log(data)
           store.$patch(data)
@@ -51,7 +53,7 @@ const plugin = (options: Options): any => {
         if (path && path.length > 0) {
           // 如果存在path 则需要判断
           if (storeName.length === 1) {
-            path.forEach(item => {
+            path.forEach((item) => {
               obj[item] = store.$state[item]
             })
           } else {
@@ -61,7 +63,10 @@ const plugin = (options: Options): any => {
         obj = path && path.length > 0 ? obj : store.$state
         storeName.includes(store.$id) &&
           store.$subscribe(() => {
-            setStorageTypeMap[storageType](`${key ?? 'pinia'}-${store.$id}`, toRaw(obj))
+            setStorageTypeMap[storageType](
+              `${key ?? 'pinia'}-${store.$id}`,
+              toRaw(obj)
+            )
           })
       }
     }

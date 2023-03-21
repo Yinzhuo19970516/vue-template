@@ -73,7 +73,10 @@ const Core = {
       return typeof object === 'function'
     },
     isObject(object: any): boolean {
-      return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object'
+      return (
+        (typeof object === 'undefined' ? 'undefined' : _typeof(object)) ===
+        'object'
+      )
     },
     isArray(object: unknown): boolean {
       return Object.prototype.toString.call(object) === '[object Array]'
@@ -102,7 +105,9 @@ const Core = {
         } else {
           if (/^\d+$/.test(v)) {
             // ? v is num
-            result.push(encodeURIComponent(keyname || v) + '=' + encodeURIComponent(item))
+            result.push(
+              encodeURIComponent(keyname || v) + '=' + encodeURIComponent(item)
+            )
           } else {
             result.push(encodeURIComponent(v) + '=' + encodeURIComponent(item))
           }
