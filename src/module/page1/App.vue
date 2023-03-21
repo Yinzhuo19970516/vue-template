@@ -9,14 +9,14 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
-import { useRouter } from 'vue-router'
+import { reactive } from "vue";
+import { useRouter } from "vue-router";
 // import { start, close } from '@/common/utils/nprogress'
 
-const router = useRouter()
+const router = useRouter();
 const state = reactive({
-  transitionName: 'slide-left'
-})
+  transitionName: "slide-left",
+});
 // 页面跳转过度动画，两种方式，请自选
 // router.beforeEach((to, from) => {
 //   start()
@@ -27,15 +27,15 @@ const state = reactive({
 // })
 router.beforeEach((to, from) => {
   if (to.meta.level > from.meta.level) {
-    state.transitionName = 'slide-left' // 向左滑动
+    state.transitionName = "slide-left"; // 向左滑动
   } else if (to.meta.level < from.meta.level) {
     // 由次级到主级
-    state.transitionName = 'slide-right' // 向右滑动
+    state.transitionName = "slide-right"; // 向右滑动
   } else {
-    state.transitionName = '' // 同级无过渡效果
+    state.transitionName = ""; // 同级无过渡效果
   }
-})
+});
 </script>
 <style>
-@import '@/common/style/pageTransAnimate.css';
+@import "@/common/style/pageTransAnimate.css";
 </style>
