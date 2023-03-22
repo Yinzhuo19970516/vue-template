@@ -12,7 +12,9 @@
     "analyze": "use_analyzer=true npm run build",
     "lint": "vue-cli-service lint",
     "prepare": "husky install",
-    "report": "vue-cli-service build --report-json"
+    "report": "vue-cli-service build --report-json",
+    "test": "echo hello world",
+    "test:run": "echo hello world"
   },
   "dependencies": {
     "core-js": "^3.8.3",
