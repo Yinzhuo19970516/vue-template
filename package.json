@@ -10,7 +10,7 @@
     "build:test": "vue-cli-service build --mode test",
     "init": "node ./src/common/initTemplate/index.js",
     "analyze": "use_analyzer=true npm run build",
-    "lint": "vue-cli-service lint --fix --ext .js,.ts,.tsx,.vue,./src --quiet",
+    "lint": "vue-cli-service lint",
     "prepare": "husky install",
     "report": "vue-cli-service build --report-json"
   },
