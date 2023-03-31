@@ -5,7 +5,7 @@ const glob = require('glob') // 用于筛选文件
 const path = require('path')
 // vue.config.js
 const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+    require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const entryName = process.env.npm_config_page
 const entry1 = glob.sync('src/main.js') // 单入口
@@ -27,17 +27,59 @@ entryList.forEach((filePath) => {
       template: pagePath || 'public/index.html',
       filename: filename + '/index.html'
     }
-    html += `<a href="${filename}/">${filename}/</a><br>`
+    html += `<a href="${filename}/" target="_blank">${filename}/</a>`
   }
 })
+
+html = `<!DOCTYPE html>
+    <html lang="zh">
+    <head>
+      <meta charset="UTF-8">
+      <title>入口列表</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <style>
+       * {
+          margin: 0;
+          padding: 0;
+       }
+       body{
+          background-color:#607d8b;
+          margin:40px
+       }
+       a{
+          margin: 10px;
+          display: inline-block;
+          white-space: nowrap;
+          cursor: pointer;
+          color: #009688;
+          background: #cfdeec;
+          text-align: center;
+          box-sizing: border-box;
+          transition: .1s;
+          font-weight: 500;
+          padding: 12px 20px;
+          font-size: 14px;
+          border-radius: 4px;
+       }
+       a:hover{    
+          background: #009688;
+          color: #fff;
+       }
+    </style>
+    <body>
+    <h2>多页面入口</h2>
+    ${html}
+    </body>
+    </html>`
 
 module.exports = defineConfig({
   publicPath: process.env.VUE_APP_PUBLIC_PATH,
   transpileDependencies: true,
   lintOnSave: 'warning',
   productionSourceMap:
-    process.env.VUE_APP_ONLINE_ENV === 'false' ||
-    process.env.NODE_ENV === 'development',
+        process.env.VUE_APP_ONLINE_ENV === 'false' ||
+        process.env.NODE_ENV === 'development',
   parallel: false,
   chainWebpack: (config) => {
     if (process.env.use_analyzer) {

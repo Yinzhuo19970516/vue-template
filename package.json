@@ -17,11 +17,12 @@
     "test:run": "echo hello world"
   },
   "dependencies": {
+    "@vant/compat": "^1",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.16",
     "qs": "^6.11.0",
-    "vant": "^3.4.6",
+    "vant": "^4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"

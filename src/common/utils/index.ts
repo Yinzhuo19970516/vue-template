@@ -1,23 +1,22 @@
-import { Toast } from 'vant'
-// import 'vant/es/toast/style'
+import { showToast, closeToast } from 'vant'
 
 export const SUCCESS_CODE = '000000'
 export const ACTIVITY_NO = '29571682bd3040bd800a4031c7fc9987'
 export const PHP_SUCCESS_CODE = '200'
 
 export function showLoading() {
-  Toast({
+  showToast({
     message: 'loading',
     forbidClick: true,
     type: 'loading'
   })
 }
 export function hideLoading() {
-  Toast.clear()
+  closeToast()
 }
 
 export function showErrorInfo(msg: string) {
-  Toast(msg && msg.toString())
+  showToast(msg && msg.toString())
 }
 
 export function formatTimeStr(date: any, fmt = 'yyyy-mm-dd') {
@@ -154,7 +153,7 @@ export function copy(copyValue: string) {
   oInput.select()
   // 对选择对象的值进行复制到浏览器中
   document.execCommand('Copy')
-  Toast({
+  showToast({
     message: '复制成功',
     forbidClick: true,
     type: 'success',

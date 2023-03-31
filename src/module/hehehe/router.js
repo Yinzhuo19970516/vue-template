@@ -36,6 +36,6 @@ const router = createRouter({
 router.afterEach(async (to) => {
   // 重置页面title
   const title = to.meta && to.meta.title
-  document.title = title || '坤元资讯'
+  document.title = title || '活动二'
 })
 export default router
