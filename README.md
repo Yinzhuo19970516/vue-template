@@ -2,7 +2,7 @@
  <img alt="logo" src="https://vuejs.org/images/logo.png" width="100" height="100">
 </p>
 <h1 align="center" style='margin-top: -20px'>Vue-template</h1>
-<p align="center">基于vue3,vue-cli4二次封装的移动端框架</p>
+<p align="center">基于vue3,vue-cli5二次封装的移动端框架</p>
 <p align="center">多入口打包 + 自动生成项目模版 + pinia + 数据持久化 + 路由动画 + axios二次封装 + less sass 变量函数处理 + viewport 适配方案</p>
 
 <p align="center">
