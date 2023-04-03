@@ -2,19 +2,19 @@
   <div class="container">
     <h2>首页 index</h2>
     <Cell title="单元格" value="内容" label="描述信息" />
-    <Button type="primary" @click="router.push('test')" class="btn"
-      >跳转测试页面</Button
+    <van-button type="primary" @click="router.push('test')" class="btn"
+      >跳转测试页面</van-button
     >
-    <Button type="primary" @click="getData" class="btn">测试接口调用</Button>
-    <Button type="primary" @click="getData2" class="btn"
-      >测试取消重复请求</Button
+    <van-button type="primary" @click="getData" class="btn">测试接口调用</van-button>
+    <van-button type="primary" @click="getData2" class="btn"
+      >测试取消重复请求</van-button
     >
     <div class="btn-box">
-      <Button round type="success" @click="router.push('colorList')"
-        >高级色页面</Button
+      <van-button round type="success" @click="router.push('colorList')"
+        >高级色页面</van-button
       >
-      <Button round type="success" @click="router.push('colorList1')"
-        >撞色页面</Button
+      <van-button round type="success" @click="router.push('colorList1')"
+        >撞色页面</van-button
       >
     </div>
   </div>
@@ -24,7 +24,7 @@
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { getInfoConfig } from '../api/index'
-import { Cell, Button } from 'vant'
+import { Cell } from 'vant'
 import * as piniaStore from '../piniaStore'
 import { setSessionStorage } from '@/common/utils/storage'
 const storeVuex = useStore()

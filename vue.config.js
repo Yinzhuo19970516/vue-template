@@ -6,6 +6,8 @@ const path = require('path')
 // vue.config.js
 const BundleAnalyzerPlugin =
     require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { VantResolver } = require('unplugin-vue-components/resolvers')
+const ComponentsPlugin = require('unplugin-vue-components/webpack')
 
 const entryName = process.env.npm_config_page
 const entry1 = glob.sync('src/main.js') // 单入口
@@ -115,6 +117,13 @@ module.exports = defineConfig({
       preProcessor: 'less',
       patterns: [path.resolve(__dirname, './src/common/style/base.less')]
     }
+  },
+  configureWebpack: {
+    plugins: [
+      ComponentsPlugin({
+        resolvers: [VantResolver()]
+      })
+    ]
   },
   css: {
     loaderOptions: {

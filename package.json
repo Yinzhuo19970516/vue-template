@@ -67,6 +67,7 @@
     "style-resources-loader": "^1.5.0",
     "ts-import-plugin": "^2.0.0",
     "typescript": "~4.5.5",
+    "unplugin-vue-components": "^0.24.1",
     "vconsole-webpack-plugin": "^1.7.3",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "webpack": "^5.0.0",
