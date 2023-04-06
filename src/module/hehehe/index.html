@@ -9,7 +9,7 @@
     />
     <meta name="referrer" content="never" />
     <link rel="icon" href="/favicon.ico" />
-    <title>加载中</title>
+    <title>活动一</title>
   </head>
   <style>
     html,
@@ -35,7 +35,10 @@
         alt=""
       />
     </div>
+    <!--    npm run build-->
 <!--    <script type="module" src="./main.js"></script>-->
+    <!--    npm run dev-->
+<!--    <script type="module" src="/src/module/hehehe/main.js"></script>-->
     <script type="module">
         let url = './main.js'
         if(import.meta.env.VITE_NODE_ENV === 'development') {
@@ -45,6 +48,9 @@
         scriptEl.type = "module"
         scriptEl.src = url
         document.body.appendChild(scriptEl)
+      // var WEB_ENV = import.meta.env.VUE_APP_ONLINE_ENV
+      // // 根据环境变量引入VConsole(判断非生产环境)
+      // if (!JSON.parse(WEB_ENV)) {
       //   var scriptEl = document.createElement('script')
       //   // vconsole.js静态资源放在测试机器10.150.27.124上，目录地址：/data/frontendStatics
       //   // scriptEl.src = 'https://h5huicai.hengyirong.com/frontendStatics/vconsole.js'

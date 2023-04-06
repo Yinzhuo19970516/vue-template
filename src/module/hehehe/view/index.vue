@@ -1,5 +1,5 @@
 <template>
-  <h1>hehehe/index</h1>
+  <h1>hehehe/index()Vite</h1>
 </template>
 
 <script>

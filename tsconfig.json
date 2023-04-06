@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "esnext", // 目标转化的语法
-    "module": "esnext", // 转化的格式
-    "moduleResolution": "node", // 解析规则
-    "strict": true, // 严格模式
-    "sourceMap": true, // 启动sourcemap 调试
-    "jsx": "preserve", // 不允许ts编译jsx语法
-    "esModuleInterop": true, // es6 和 commonjs 转化
-    "lib": ["esnext", "dom"], // 支持esnext和dom语法
-    "baseUrl": ".",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"] // @符号的真实含义， 还需要配置vite别名， 和 declare module
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  // 编译那些文件
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["src/tests/**/*.*"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","./auto-imports.d.ts","./vite-plugin-require-transform.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -37,5 +37,5 @@ router.beforeEach((to, from) => {
 })
 </script>
 <style>
-/*@import '@/common/style/pageTransAnimate.css';*/
+@import '@/common/style/pageTransAnimate.css';
 </style>
