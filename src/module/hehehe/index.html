@@ -36,31 +36,32 @@
       />
     </div>
     <!--    npm run build-->
-<!--    <script type="module" src="./main.js"></script>-->
+    <script type="module" src="./main.js"></script>
     <!--    npm run dev-->
 <!--    <script type="module" src="/src/module/hehehe/main.js"></script>-->
-    <script type="module">
-        let url = './main.js'
-        if(import.meta.env.VITE_NODE_ENV === 'development') {
-            url = import.meta.url.match(/http:\/\/[^\/]+(.+?)\/[^\/]+$/)[1] +'/main.js'
-        }
-        let scriptEl = document.createElement('script')
-        scriptEl.type = "module"
-        scriptEl.src = url
-        document.body.appendChild(scriptEl)
-      // var WEB_ENV = import.meta.env.VUE_APP_ONLINE_ENV
-      // // 根据环境变量引入VConsole(判断非生产环境)
-      // if (!JSON.parse(WEB_ENV)) {
-      //   var scriptEl = document.createElement('script')
-      //   // vconsole.js静态资源放在测试机器10.150.27.124上，目录地址：/data/frontendStatics
-      //   // scriptEl.src = 'https://h5huicai.hengyirong.com/frontendStatics/vconsole.js'
-      //   scriptEl.src = '<%= BASE_URL %>vConsole.js'
-      //   scriptEl.async = true
-      //   document.head.appendChild(scriptEl)
-      //   scriptEl.onload = function () {
-      //     window.vConsole = new VConsole()
-      //   }
-      // }
-    </script>
+<!--    <script type="module">-->
+<!--        let url = './main.js'-->
+<!--        if(import.meta.env.VITE_NODE_ENV === 'development') {-->
+<!--            url = import.meta.url.match(/http:\/\/[^\/]+(.+?)\/[^\/]+$/)[1] +'/main.js'-->
+<!--        }-->
+<!--        let scriptEl = document.createElement('script')-->
+<!--        scriptEl.type = "module"-->
+<!--        scriptEl.src = url-->
+<!--        document.head.appendChild(scriptEl)-->
+<!--    </script>-->
   </body>
 </html>
+<!--      // var WEB_ENV = import.meta.env.VUE_APP_ONLINE_ENV-->
+<!--      // // 根据环境变量引入VConsole(判断非生产环境)-->
+<!--      // if (!JSON.parse(WEB_ENV)) {-->
+<!--      //   var scriptEl = document.createElement('script')-->
+<!--      //   // vconsole.js静态资源放在测试机器10.150.27.124上，目录地址：/data/frontendStatics-->
+<!--      //   // scriptEl.src = 'https://h5huicai.hengyirong.com/frontendStatics/vconsole.js'-->
+<!--      //   scriptEl.src = '<%= BASE_URL %>vConsole.js'-->
+<!--      //   scriptEl.async = true-->
+<!--      //   document.head.appendChild(scriptEl)-->
+<!--      //   scriptEl.onload = function () {-->
+<!--      //     window.vConsole = new VConsole()-->
+<!--      //   }-->
+<!--      // }-->
+

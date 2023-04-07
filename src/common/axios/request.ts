@@ -83,7 +83,6 @@ function removePending(config: MyAxiosRequestConfig) {
   }
 }
 
-console.log(import.meta.env,process.env)
 const config: TAxiosOption = {
   baseURL: import.meta.env.VITE_APP_ACTIVITY_SERVER_TARGET,
   timeout: import.meta.env.VITE_APP_API_TIMEOUT,
@@ -95,7 +94,6 @@ const config: TAxiosOption = {
 class Request {
   instance: AxiosInstance
   constructor(config: TAxiosOption) {
-    console.log(config)
     this.instance = axios.create(config)
     this.instance.interceptors.request.use(
       (requestConfig: MyAxiosRequestConfig) => {

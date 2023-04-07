@@ -53,9 +53,11 @@ const getPageInput = () => {
   return input
 }
 const inputPage = getPageInput()
+console.log(process.cwd(),   path.resolve(process.cwd(), '/page1/index.html'));
 
 export default defineConfig({
-  root: env.VITE_NODE_ENV === 'development'? './' : "./src/module",
+  // root: env.VITE_NODE_ENV === 'development'? './' : './src/module',
+  // envDir: env.VITE_NODE_ENV === 'development'? './' : './../',
   plugins: [
     vue(),
     legacy({
@@ -111,15 +113,20 @@ export default defineConfig({
     APP_VITE_MODULE_PAGE: JSON.stringify(inputPage),
     'process.env': loadEnv(mode, process.cwd())
   },
+  // publicDir: env.VITE_NODE_ENV === 'development'? './public':'../../public',
   build: {
     emptyOutDir: true,
-    outDir: path.resolve(__dirname, 'dist'),
+    // outDir: path.resolve(__dirname, './dist'),
     rollupOptions: {
-      input:inputPage,
+      // input: {
+      //   page1: path.resolve(__dirname, './src/module/page1/index.html'),
+      //   // hehehe: path.resolve(__dirname, './hehehe/index.html')
+      // },
+      input: inputPage,
       output: {
-        entryFileNames: 'static/js/[name]-[hash].js',
-        chunkFileNames: 'static/js/[name]-[hash].js',
-        assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+        entryFileNames: 'js/[name]-[hash].js',
+        chunkFileNames: 'js/[name]-[hash].js',
+        assetFileNames: '[ext]/[name]-[hash].[ext]'
       }
     }
   },
