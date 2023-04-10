@@ -126,6 +126,7 @@ module.exports = defineConfig({
     ]
   },
   css: {
+    extract: true,
     loaderOptions: {
       sass: {
         additionalData: '@import "@/common/style/base.scss"'
